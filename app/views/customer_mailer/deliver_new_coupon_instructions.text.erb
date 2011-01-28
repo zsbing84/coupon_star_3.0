@@ -1,0 +1,17 @@
+こんにちは　<%= @customer.email %> 様
+
+#{@coupon.shop.name}からお得なクーポンが発行されましたので、お届け致します。
+
+クーポンタイトル：　
+#{@coupon.title}
+
+利用可能期間：		
+#{@coupon.start_at.strftime("%Y年%m月%d日")}～#{@coupon.end_at.strftime("%Y年%m月%d日")}
+
+下記のURLをクリックして頂き、お得なクーポン詳細をご確認下さい。
+<%= coupon_url(@coupon) %>
+
+
+┌─ クーポンスター(COUPONSTAR) ──────────────
+│★クーポンスター(COUPONSTAR)★　http://www.couponstar.jp
+└───────────────────

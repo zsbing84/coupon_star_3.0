@@ -1,0 +1,30 @@
+
+<center>
+	<div class="display_items_count_info"">
+	  ショップ数: <%= @shops.count %>
+	</div>
+	 <br />
+</center>
+
+<% for shop in @shops %>
+	<% if !shop.photo_file_name.nil? %>
+		<div class="item_image">
+				<%= image_tag shop.photo.url(:thumb) %>
+		</div>
+	<% else %>
+		<div class="sample_shop_image"></div>
+	<% end %>
+
+	<%= link_to shop.name, shop, :class => "shops_name"%><br /><br />
+  <span class="shop_coupons" ">
+		<%= link_to "クーポン一覧へ", display_coupons_shop_path(shop) %>
+	</span><br />
+	<div style="clear: both;"></div>
+  <div class="shop_followers_count">
+	</div>
+	<% if shop != @shops.last %>
+		<div id="dotline"></div>
+	<% end %>
+
+<% end %>
+

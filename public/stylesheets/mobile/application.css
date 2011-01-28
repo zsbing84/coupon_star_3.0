@@ -1,0 +1,309 @@
+
+html body  {
+	font-size: 11px;
+	background: none repeat scroll 0% 0% rgb(255, 255, 255);
+	margin-top: 0pt;
+	padding-top: 0pt;
+	font-family: monospace;
+	width: 234px;
+	border: 2px solid black;
+}
+
+html body #container{
+	background: none repeat scroll 0% 0% rgb(236, 242, 251);
+}
+
+html body #container a{
+  font-size: 11px;
+}
+
+html body #container #error_explanation{
+  color: red;
+}
+
+html body #container .notice{
+  color: green;
+}
+
+html body #container .top_division{
+	border-top-style:solid;
+	border-bottom-style:solid;
+	border-width:1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+  background-repeat:no-repeat;
+  width: 100%;
+  font-size: 13px;
+  font-weight: bold;
+	background-color: #E4E4E4;
+}
+
+html body #container .hr{
+	border-color: rgb(238, 238, 238);
+	background-color: rgb(238, 238, 238);
+	margin: 0px;
+	padding: 0px;
+}
+
+html body #container #dotline{
+  background-image:url("/images/mobile/dotline240x5.gif");
+  width: 240px;
+	height: 5px;
+}
+
+html body #container #header #logo a {
+  background-image:url("/images/mobile/logo.png");
+  background-repeat:no-repeat;
+  display:block;
+  height:58px;
+  width: 100%;
+}
+
+html body #container .input_label{
+  font-size: 11px;
+	font-weight: bold;
+}
+
+html body #container .input_field{
+  font-size: 11px;
+  width: 100%;
+}
+
+html body #container .input_select{
+  font-size: x-small;
+}
+
+html body #container .login_checkbox{
+  font-size: x-small;
+	text-align: center;
+}
+
+html body #container .login_reset_pwd{
+	text-align: center;
+}
+
+html body #container .input_submit{
+  font-size: small;
+}
+
+html body #container select{
+  font-size: small;
+}
+
+html body #container #corp_image{
+  background-image:url("/images/mobile/corp_mark.gif");
+  background-repeat:no-repeat;
+  height:15;
+  width:15;
+	display:inline-block;
+}
+
+html body #container #signup_image{
+  background-image:url("/images/mobile/emoji/emoji_1.gif");
+  background-repeat:no-repeat;
+  height:15;
+  width:15;
+  border: 0;
+	display: inline-block;
+  text-indent:-9999px;
+}
+
+html body #container .footer_item{
+  font-size: 12px;;
+}
+
+html body #container .display_items_count_info{
+	font-size: 11px;
+  font-weight: bold;
+	color: rgb(136, 136, 136)
+}
+
+html body #container .image{
+	width: 80px;
+	height: 60px;
+	margin-left: 3px;
+	margin-right: 3px;
+	float: left;
+}
+
+html body #container .item_image{
+	width: 80px;
+	height: 60px;
+	margin: 3px 10px 3px 3px;
+	float: left;
+}
+
+html body #container .sample_coupon_image{
+  background-image:url("/images/mobile/sample_coupon.jpg");
+	margin: 3px 10px 3px 3px;
+	width: 80px;
+	height: 60px;
+	float: left;
+}
+
+html body #container .sample_shop_image{
+  background-image:url("/images/mobile/sample_shop.jpg");
+	width: 80px;
+	height: 60px;
+	margin: 3px 10px 3px 3px;
+	float: left;
+}
+
+html body #container .coupon_shop_name{
+	font-size: 9px;
+	color: rgb(68, 68, 68);
+}
+
+html body #container .available_count{
+	font-size: 9px;
+	color: blue;
+}
+
+html body #container .coupon_title{
+	font-size: small;
+}
+
+html body #container .shop_detail_name{
+	margin-left: 10px;
+  font-weight: bold;
+	font-size: 12px;
+	color: rgb(68, 68, 68);
+}
+
+html body #container .shop_detail_followers{
+	font-size: 11px;
+	color: rgb(68, 68, 68);
+}
+
+html body #container .shop_detail_coupons{
+	font-size: 11px;
+	color: rgb(68, 68, 68);
+}
+
+html body #container .coupon_detail_title{
+	font-size: 12px;
+  font-weight: bold;
+	color: rgb(68, 68, 68);
+}
+
+html body #container .coupons_shop_name{
+	font-size: 10px;
+	color: rgb(68, 68, 68);
+}
+
+html body #container .coupons_title{
+	font-size: 12px;
+}
+
+html body #container .shops_name{
+	font-size: 13px;
+}
+
+html body #container .coupon_detail_shop_name{
+	font-size: 11px;
+  font-weight: bold;
+	color: rgb(68, 68, 68);
+}
+
+html body #container .shop_coupons{
+	font-size: xx-small;
+	color: rgb(68, 68, 68);
+}
+
+html body #container .shop_followers_count{
+	font-size: 9px;
+	color: rgb(68, 68, 68);
+}
+
+html body #container .coupon_period{
+	font-size: xx-small;
+	color: rgb(136, 136, 136);
+}
+
+html body #container .follow_form{
+	border-top-style:solid;
+	border-bottom-style:solid;
+	border-width:1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+	font-size: small;
+  background-color: #D4E4D2;
+}
+
+
+html body #container .follow_form input{
+  font-size: small;
+}
+
+html body #container .coupon_use_form{
+	border-top-style:solid;
+	border-bottom-style:solid;
+	border-width:1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+	font-size: small;
+  background-color: #D4E4D2;
+}
+
+html body #container .coupon_use_form input{
+  font-size: small;
+}
+
+html body #container .search_form{
+	font-size: small;
+  background-color: rgb(238, 238, 238);
+	border-top-style:solid;
+	border-bottom-style:solid;
+	border-width:1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+	width: 100%;
+}
+
+html body #container .search_field{
+  width: 70%;
+}
+
+html body #container .search_submit{
+  width: 20%;
+  font-size: small;
+}
+
+html body #container .coupon_use{
+  font-size: 11px;
+}
+
+html body #container .coupon_use_successful_msg{
+  font-size: 11px;
+  color: green;
+}
+
+html body #container .coupon_use_msg{
+  font-size: 11px;
+}
+
+html body #container .coupon_use_before_msg{
+  font-size: x-small;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: red;
+}
+
+html body #container .coupon_use_verification_code{
+  font-size: 11px;
+  font-weight: bold;
+	color: blue;
+}
+
+html body #container .coupon_not_fount_msg{
+  font-size: 11px;
+}
+
+html body #container .error_message{
+  color: red;
+}
+

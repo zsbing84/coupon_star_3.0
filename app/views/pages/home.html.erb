@@ -1,0 +1,13 @@
+
+<div id="new_account">
+  <% flash.each do |key, value| %>
+    <div class="notice">
+      <h3><%= value %></h3>
+    </div>
+  <% end %>
+  <a href='/masters/new' id='create_account' class="new_item" >
+    <span class="name"></span>
+    <span class="description">Sign Up</span>
+  </a>
+</div>
+

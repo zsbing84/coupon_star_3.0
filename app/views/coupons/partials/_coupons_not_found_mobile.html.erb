@@ -1,0 +1,33 @@
+<% if @coupons.count != 0 %>
+  <div id="searchnotfound" style="display: none;">
+<% else %>
+  <div id="searchnotfound" style="display: block;">
+<% end %>
+    <% if @coupons_search == true %>
+      <div class="error_message">
+        ご指定のキーワードにマッチするクーポンはありませんでした。「確認」ボタンを押すとマイクーポン画面へ戻ります。
+      </div>
+			<br />
+			<center>
+			  <%= link_to "確認", coupons_path %>
+			</center>
+    <% elsif @shop_display_coupons == true %>
+			<br />
+			<div class="error_message">
+			  <%= @shop.name %>が有効なクーポンを提供していません。「確認」ボタンを押すとマイショップ画面へ戻ります。
+			</div>
+			<br />
+			<center>
+			  <%= link_to "確認", shops_path %>
+			</center>
+    <% else %>
+      <div class="error_message">
+        有効なクーポンがありません。ショップをフォローしてクーポンをGETしましょう！
+      </div>
+		  <br />
+			<center>
+				<%= link_to "ショップ検索へ", shops_search_form_path %>
+			</center>
+    <% end %>
+  </div>
+

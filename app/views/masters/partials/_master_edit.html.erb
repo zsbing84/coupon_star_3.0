@@ -1,0 +1,46 @@
+
+
+<div class="dialog">
+<%= render 'shared/error_messages', :object => @master %>
+  <div class="panel_body">
+    <%= form_for @master do |f| %>
+      <fieldset>
+        <div class="field">
+          <h3><%= f.label :email %></h3>
+          <%= f.text_field :email, :size => "53", :readonly => signed_in_master? && !admin_master? %>
+        </div>
+        <div class="field">
+          <h3><%= f.label :password %></h3>
+          <%= f.text_field :password, :size => "53"%>
+        </div>
+				<div class="field">
+          <h3><%= f.label :password %></h3>
+          <%= f.password_field :password_confirmation, :size => "53"%>
+        </div>
+      </fieldset>
+			<% if @master.id.nil? %>
+				<% if admin_master? %>
+					<fieldset class="submit">
+		        <%= f.submit "新規作成", :class => "link_button"%>
+		      </fieldset>
+				<% else %>
+					<fieldset class="submit">
+		        <%= f.submit "登録内容を送信", :class => "link_button"%>
+		      </fieldset>
+				<% end %>
+			<% else %>
+					<fieldset class="submit">
+						<% if admin_master? %>
+							<%= link_to "削除", @master, :method => :delete,
+		              :confirm => "#{@master.email}を永久に削除してよろしいでしょうか?",
+		                                         	:title => "#{@master.email}を削除",
+		                                         	:class => "link_button destroy"%>
+						<% end %>
+						<span class="separator"></span>
+		        <%= f.submit "保存", :class => "link_button"%>
+		      </fieldset>
+			<% end %>
+    <% end %>
+  </div>
+</div>
+

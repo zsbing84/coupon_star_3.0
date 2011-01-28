@@ -1,0 +1,37 @@
+
+<center>
+	<div class="display_items_count_info"">
+	  クーポン数： <%= @coupons.count %>
+	</div>
+	 <br />
+</center>
+
+<% for coupon in @coupons %>
+  <% if !coupon.photo_file_name.nil? %>
+    <div class="item_image">
+      <%= image_tag coupon.photo.url(:thumb)%>
+    </div>
+  <% else %>
+	  <div class="sample_coupon_image"></div>
+  <% end %>
+	<span>
+		<%= link_to coupon.shop.name, coupon.shop, :class => "coupons_shop_name"%>
+	</span><br />
+  <span>
+		<%= link_to coupon.title, coupon, :class => "coupons_title"%>
+	</span><br />
+  <br />
+
+	<div style="clear: both;"></div>
+  <span class="available_count">
+    	残り利用回数： <%= available_count(coupon) %>回
+  </span>
+	<div class="coupon_period">
+		<%=coupon.start_at %> ～ <%=coupon.end_at %>
+	</div>
+	<% if coupon != @coupons.last %>
+		<div id="dotline"></div>
+	<% end %>
+
+<% end %>
+

@@ -1,0 +1,30 @@
+<div id="subheader">
+  <div class="coupon_title">
+    <h1><%= @title %></h1>
+  </div>
+  <ul class="submenu">
+    <% if @coupon_general_info == true || @shop_general_info == true %>
+    <li class="active">
+    <% else %>
+    <li>
+    <% end %>
+       <% if !@coupon.nil? %>
+          <%= link_to "クーポン情報", edit_coupon_path(@coupon) %>
+       <% elsif !@shop.nil? %>
+          <%= link_to "ショップ情報", edit_shop_path(@shop) %>
+       <% end %>
+    </li>
+    <% if @coupon_analysis_info == true || @shop_analysis_info == true %>
+    <li class="active">
+    <% else %>
+    <li>
+    <% end %>
+       <% if !@coupon.nil? %>
+          <%= link_to "利用分析", analysis_coupon_path(@coupon) %>
+       <% elsif !@shop.nil? %>
+          <%= link_to "フォロワー分析", analysis_shop_path(@shop) %>
+       <% end %>
+    </li>
+  </ul>
+</div>
+

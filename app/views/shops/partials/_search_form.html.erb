@@ -1,0 +1,15 @@
+<form action="/shops_search" method='get', id="search_bar">
+  <fieldset class="part">
+    <h2>ショップ数： <%= @shops.count %></h2>
+    <div class="field">
+      <label>
+        <%= link_to "すべてのショップを表示", shops_path %>
+          <span class="separator"> | </span>
+          ショップ名で検索
+      </label>
+			<%= hidden_field_tag 'master_id', @current_master.id %>
+      <%= text_field_tag :keywords, params[:keywords], :class => "text" %>
+    </div>
+  </fieldset>
+</form>
+

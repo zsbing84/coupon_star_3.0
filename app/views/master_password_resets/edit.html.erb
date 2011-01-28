@@ -1,0 +1,12 @@
+<h1>Change Master Password</h1>
+
+<% form_for @master, :url => master_password_reset_path, :method => :put do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :password %><br />
+  <%= f.password_field :password %><br />
+  <br />
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %><br />
+  <br />
+  <%= f.submit "Update password and log me in" %>
+<% end %>

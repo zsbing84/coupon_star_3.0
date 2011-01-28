@@ -1,0 +1,22 @@
+rails generate controller Pages home contact
+rails generate controller Masters new edit
+rails generate controller Customers new edit
+rails generate controller Coupons new edit
+rails generate controller Shops new edit
+rails generate controller MasterActivations
+rails generate controller CustomerActivations
+rails generate controller MasterSessions new
+rails generate controller CustomerSessions new
+rails generate model Master login:string email:string admin:boolean active:boolean crypted_password:string password_salt:string persistence_token:string perishable_token:string
+rails generate model Customer login:string email:string birthday:date age:integer gender:string active:boolean crypted_password:string password_salt:string persistence_token:string perishable_token:string
+rails generate model Coupon title:string content:string fine_print:string start_at:date end_at:date shop_id:integer view_count:integer use_count:integer 
+rails generate model Shop name:string description:string address:string phone_number:string opening_hours:string map_url:string master_id:integer
+rails generate model CouponCustomerRel coupon_id:integer customer_id:integer
+rails generate model ShopCustomerRel shop_id:integer customer_id:integer
+rails generate model ViewAction coupon_id:integer customer_id:integer view_time:datetime
+rails generate model UseAction coupon_id:integer customer_id:integer view_time:datetime
+rails generate model UseAction coupon_id:integer customer_id:integer view_time:datetime
+rails generate session master_session
+rails generate session customer_session
+rails generate mailer master_mailer
+rails generate mailer customer_mailer

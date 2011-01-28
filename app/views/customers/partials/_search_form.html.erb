@@ -1,0 +1,14 @@
+<form action="/customers_search" method='get', id="search_bar">
+  <fieldset class="part">
+    <h2>カスタマー数： <%= @customers.count %></h2>
+    <div class="field">
+      <label>
+        <%= link_to "すべてのカスタマーを表示", customers_path %>
+          <span class="separator"> | </span>
+          メールアドレスで検索
+      </label>
+      <%= text_field_tag :keywords, params[:keywords], :class => "text" %>
+    </div>
+  </fieldset>
+</form>
+

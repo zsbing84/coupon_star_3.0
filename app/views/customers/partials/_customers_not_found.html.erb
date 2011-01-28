@@ -1,0 +1,18 @@
+<% if @customers.count != 0 %>
+  <div id="searchnotfound" style="display: none;">
+<% else %>
+  <div id="searchnotfound" style="display: block;">
+<% end %>
+    <% if @customers_search == true %>
+      <h3>
+        ご指定のキーワードにマッチするカスタマーはありませんでした。
+        <%= link_to "すべてのショップを表示", customers_path %>
+      </h3>
+    <% else %>
+      <h3>
+        カスタマーが存在していません。新しいカスタマーを作成しましょう！
+        <%= link_to "新規作成へ", new_customer_path %>
+      </h3>
+    <% end %>
+  </div>
+

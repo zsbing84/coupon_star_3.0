@@ -1,0 +1,90 @@
+
+<div class="top_division">ショップ情報</div>
+<br />
+
+<center>
+  <span class="shop_detail_name" ">
+	  <%= @shop.name %>
+  </span>
+  <br /><br />
+</center>
+
+<% if !@shop.photo_file_name.nil? %>
+  <div class="item_image">
+    <%= image_tag @shop.photo.url(:thumb)%>
+  </div>
+<% else %>
+  <div class="sample_shop_image"></div>
+<% end %>
+
+<span class="shop_detail_followers" ">
+	フォロワー数： <%= @shop.customers.count%>
+</span>
+<br /><br />
+
+<span class="shop_detail_coupons" ">
+	<%= link_to "クーポン一覧へ", display_coupons_shop_path(@shop) %>
+</span><br />
+
+<div style="clear: both;"></div>
+<br />
+
+<center>
+	<%= render '/shops/partials/follow_form' %>
+</center>
+
+<div class="input_label">■店名：</div>
+<div class="input_field"><%= @shop.name %></div>
+<br />
+
+<div id="dotline"></div>
+<div class="input_label">■店舗詳細：</div>
+<div class="input_field"><%= @shop.description %></div>
+<br />
+
+<div id="dotline"></div>
+<div class="input_label">■郵便番号：</div>
+<div class="input_field"><%= @shop.postcode %></div>
+<br />
+
+<div id="dotline"></div>
+<div class="input_label">■住所：</div>
+<div class="input_field"><%= @shop.address %></div>
+<br />
+
+<div id="dotline"></div>
+<div class="input_label">■電話番号：</div>
+<div class="input_field">
+	<%= @shop.phone_part_1 %>-<%= @shop.phone_part_2 %>-<%= @shop.phone_part_3 %>
+</div>
+<br />
+
+<div id="dotline"></div>
+<div class="input_label">■最寄駅：</div>
+<div class="input_field"><%= @shop.nearest_station %></div>
+<br />
+
+<div id="dotline"></div>
+<div class="input_label">■営業時間：</div>
+<div class="input_field">
+	<% for open_hour in @shop.open_hours %>
+	  ・<%= open_hour.open_at.strftime("%H:%M") %> ～ <%= open_hour.close_at.strftime("%H:%M") %>
+		<br />
+	<% end %>
+	<br />
+</div>
+
+<div id="dotline"></div>
+<div class="input_label">■定休日：</div>
+<div class="input_field"><%= @shop.holiday%></div>
+<br />
+
+
+<div id="dotline"></div>
+<div class="input_label">■地図：</div>
+<br />
+
+<img width="#{@width}" height="#{@height}" alt="map" src=<%= @map_img_src %> >
+
+<br />
+

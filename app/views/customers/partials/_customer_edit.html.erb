@@ -1,0 +1,59 @@
+
+<div class="customer_detail">
+  <% flash.each do |key, value| %>
+    <div class="notice">
+      <h3><%= value %></h3>
+    </div>
+  <% end %>
+  <%= render 'shared/error_messages', :object => @customer %>
+  <div class="panel">
+    <div class="panel-body">
+      <%= form_for @customer, :html => { :multipart => true } do |f| %>
+				<div class="part">
+				  <h3><%= f.label :email %><div class="com_icon"></div></h3>
+				  <div class="field">
+				    <%= f.text_field :email, :size => "50", :class => "text password" %>
+				  </div>
+				</div>
+				<div class="part">
+				  <h3><%= f.label :password %><div class="com_icon"></div></h3>
+				  <div class="field">
+				    <%= f.text_field :password, :size => "50", :class => "text password" %>
+				  </div>
+				</div>
+				<div class="part">
+				  <h3><%= f.label :password_confirmation %><div class="com_icon"></div></h3>
+				  <div class="field">
+				    <%= f.text_field :password_confirmation, :size => "50", :class => "text password" %>
+				  </div>
+				</div>
+				<div class="part">
+				  <h3><%= f.label :birthday %><div class="com_icon"></div></h3>
+				  <div class="field">
+				    <%= f.text_field :birthday, :class => "text password" %>
+				  </div>
+				</div>
+				<div class="part">
+				  <h3><%= f.label :gender_id %><div class="com_icon"></div></h3>
+				  <div class="field">
+				    <%= f.collection_select :gender_id, Gender.find(:all), :id, :name, {}, %>
+				  </div>
+				</div>
+				<% if @customer.id.nil? %>
+					<div class="part">
+	          <%= f.submit "新規作成", :class => "link_button create" %>
+	        </div>
+				<% else %>
+					<div class="part">
+	          <%= f.submit "保存", :class => "link_button save"%>
+	          <%= link_to "削除", @customer, :method => :delete,
+	            :confirm => "#{@customer.email}を永久に削除してよろしいでしょうか?",
+	                                       	:title => "Delete #{@customer.email}",
+	                                        :class => "link_button destroy" %>
+	        </div>
+				<% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

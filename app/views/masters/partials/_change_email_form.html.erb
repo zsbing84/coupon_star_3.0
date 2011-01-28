@@ -1,0 +1,16 @@
+
+<div class="part">
+  <%= form_for @master do |f| %>
+    <fieldset>
+      <h3>メールアドレス変更</h3>
+      <div class="field">
+        <%= f.label :email, "新しいメールアドレス" %>
+        <%= f.text_field :email, :class => "text password", :size => "40"%>
+      </div>
+      <p class="submit">
+        <%= f.submit "保存", :class => "submit"%>
+      </p>
+    </fieldset>
+  <% end %>
+</div>
+

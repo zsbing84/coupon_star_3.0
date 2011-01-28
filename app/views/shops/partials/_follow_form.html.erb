@@ -1,0 +1,8 @@
+
+
+<% if current_customer.following?(@shop) %>
+  <%= render '/shops/partials/unfollow' %>
+<% else %>
+  <%= render '/shops/partials/follow' %>
+<% end %>
+

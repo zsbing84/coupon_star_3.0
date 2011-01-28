@@ -1,0 +1,29 @@
+<% for customer in @customers %>
+  <div class="customer part">
+    <%= link_to edit_customer_path(customer), :class => "customer_image" do %>
+			<div class="sample_customer_image"></div>
+    <% end %>
+    <div class="customer_name">
+      <span class="count">
+        ショップ数： <%= customer.shops.count%>
+        <span class="separator"></span>
+        クーポン数： <%= customer.get_coupons.count %>
+      </span>
+      <h4>
+        <%= link_to customer.email, edit_customer_path(customer) %>
+      </h4>
+    </div>
+    <div class="display_coupons">
+      <%= link_to "ショップ一覧へ", display_shops_customer_path(customer) %>
+			<span class="separator"></span>
+			<span class="separator"></span>
+      <%= link_to "クーポン一覧へ", display_coupons_customer_path(customer) %>
+    </div>
+    <ul class="submenu">
+      <li>
+        <%= link_to "カスタマー情報", edit_customer_path(customer), :class => "action_botton" %>
+      </li>
+    </ul>
+	</div>
+<% end %>
+

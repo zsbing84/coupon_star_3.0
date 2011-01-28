@@ -1,0 +1,3 @@
+$("follow_form").update("<%= escape_javascript(render('shops/follow')) %>")
+$("followers").update('<%= "#{@shop.customers.count} followers" %>')
+

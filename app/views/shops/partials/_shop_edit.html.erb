@@ -1,0 +1,127 @@
+
+<div class="shop_detail">
+  <% flash.each do |key, value| %>
+    <div class="notice">
+      <h3><%= value %></h3>
+    </div>
+  <% end %>
+  <%= render 'shared/error_messages', :object => @shop %>
+  <div class="panel">
+    <div class="panel-body">
+      <%= form_for @shop, :html => { :multipart => true } do |f| %>
+				<div class="part">
+				  <h3><%= f.label :name %><div class="com_icon"></div></h3>
+				  <div class="field">
+				    <%= f.text_field :name, :size => "30", :maxlength => "20",
+				                     :class => "text password", :value => @shop.name %>
+				    <span class="separator"></span>
+				    <% if !@shop.id.nil? %>
+				      <%=link_to "クーポン一覧へ", display_coupons_shop_path(@shop) %>
+				    <% end %>
+				    <p>※ 全角20文字以内にご入力下さい。</p>
+				  </div>
+				</div>
+				<div class="part">
+				  <h3><%= f.label :postcode %><div class="com_icon"></div></h3>
+				  <div class="field">
+				    <%= f.text_field :postcode, :size => "5", :maxlength => "7",
+				                     :class => "text password", :value => @shop.postcode %>
+						<br />
+				    <p>例: 1600000</p>
+				  </div>
+				</div>
+				<div class="part">
+				  <h3><%= f.label :phone_number %><div class="com_icon"></div></h3>
+				  <div class="field">
+				    <%= f.text_field :phone_part_1, :size => "2", :maxlength => 3,
+				                     :class => "text password", :value => @shop.phone_part_1 %>
+				    <span class="phone_separator">-</span>
+				    <%= f.text_field :phone_part_2, :size => "2", :maxlength => 4,
+				                     :class => "text password", :value => @shop.phone_part_2 %>
+				    <span class="phone_separator">-</span>
+				    <%= f.text_field :phone_part_3, :size => "2", :maxlength => 4,
+				                     :class => "text password", :value => @shop.phone_part_3 %>
+            <p>例: 03-0303-0303</p>
+				  </div>
+				</div>
+				<div class="part">
+				  <h3><%= f.label :nearest_station %><div class="com_icon"></div></h3>
+				  <div class="field">
+				    <%= f.text_field :nearest_station, :size => "50",
+				                     :class => "text password", :value => @shop.nearest_station %>
+						<br />
+				    <p>例: JR中央線・山手線「新宿駅」より徒歩3分</p>
+				  </div>
+				</div>
+				<div class="part">
+				  <h3><%= f.label :open_hours %><div class="com_icon"></div></h3>
+				  <div class="field">
+				    <%= f.fields_for :open_hours do |builder| %>
+				      <%= render '/shops/partials/open_hour_field', :f => builder %>
+				    <% end %>
+				    <div class="sub_field"><%= link_to_add_open_hour_field "営業時間帶を追加", f, :open_hours %></div>
+						<p>※ 例： 18：00～翌1：00(L.O.24：00) 。</p>
+				  </div>
+				</div>
+        <div class="part">
+				  <h3><%= f.label :holiday %><div class="com_icon"></div></h3>
+				  <div class="field">
+				    <%= f.text_field :holiday, :size => "35", :maxlength => "20",
+				                     :class => "text password", :value => @shop.holiday %>
+            <p>例: 月曜日・第3火曜日</p>
+				  </div>
+				</div>
+				<div class="part">
+				  <h3><%= f.label :address %><div class="com_icon"></div></h3>
+				  <div id="address_input" class="field">
+				    <%= f.text_field :address, :size => "50",
+				                     :class => "text password", :value => @shop.address %>
+				    <br />
+				    <p>例: 東京都港区芝公園4-2-8</p>
+				  </div>
+				</div>
+				<% if !@map_img_src.nil? %>
+				  <div class="part">
+				    <h3><%= f.label :map %></h3>
+				    <div id="map"">
+							<img alt="map" src=<%= @map_img_src %> >
+						</div>
+				  </div>
+				<% end %>
+				<div class="part edit_end">
+				  <h3><%= f.label :photo %></h3>
+				  <div class="field">
+				    <%= f.file_field :photo%>
+				    <% if !@shop.photo_file_name.nil? %>
+				      <div class="photo">
+				        <%= image_tag @shop.photo.url(:normal) %>
+				      </div>
+				    <% end %>
+				  </div>
+				</div>
+				<div class="part">
+				  <h3><%= f.label :description %><div class="com_icon"></div></h3>
+				  <div class="field">
+				    <%= f.text_area :description, :size => "60x15", :maxlength => "160",
+				                     :class => "text password", :value => @shop.description %>
+						<p>※ 全角160文字以内にご入力下さい。</p>
+				  </div>
+				</div>
+				<% if @shop.id.nil? %>
+					<div class="part">
+	          <%= f.submit "新規作成", :class => "link_button submit" %>
+	        </div>
+				<% else %>
+					<div class="part">
+	          <%= f.submit "保存", :class => "link_button save"%>
+	          <%= link_to "削除", @shop, :method => :delete,
+	            :confirm => "#{@shop.name}を永久に削除してよろしいでしょうか?",
+	                                       	:title => "Delete #{@shop.name}",
+	                                        :class => "link_button destroy" %>
+	        </div>
+				<% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

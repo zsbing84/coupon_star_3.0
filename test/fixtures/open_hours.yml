@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  shop_id: 1
+  open_at: 2010-12-05 23:45:25
+  end_at: 2010-12-05 23:45:25
+
+two:
+  shop_id: 1
+  open_at: 2010-12-05 23:45:25
+  end_at: 2010-12-05 23:45:25

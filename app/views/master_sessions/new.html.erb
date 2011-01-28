@@ -1,0 +1,38 @@
+<%= render 'shared/error_messages', :object => @master_session %>
+<div id="sign_in">
+  <% flash.each do |key, value| %>
+    <div class="notice login">
+      <h3><%= value %></h3>
+    </div>
+  <% end %>
+  <div class="dialog">
+    <div class="panel_body">
+      <%= form_for @master_session do |f| %>
+        <fieldset>
+          <div class="field">
+            <h3>メールアドレス</h3>
+            <%= f.text_field :email, :size => "52"%>
+          </div>
+          <div class="field">
+            <h3>パスワード</h3>
+            <%= f.password_field :password, :size => "52"%>
+          </div>
+          <div class="remember_me">
+            <%= f.check_box :remember_me%>
+            <h3>ログイン状態を保持する</h3>
+          </div>
+        </fieldset>
+        <fieldset class="submit">
+          <p>
+            <%= link_to "パスワードを忘れた方はコチラ", new_master_password_reset_path %>
+          </p>
+          <%= f.submit "ログイン", :class => "submit"%>
+        </fieldset>
+      <% end %>
+    </div>
+  </div>
+  <%= link_to master_signup_path, :id => "message" do %>
+    <span>新規登録</span>
+  <% end %>
+</div>
+

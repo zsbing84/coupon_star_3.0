@@ -1,0 +1,33 @@
+<% if @coupons.count != 0 %>
+  <div id="searchnotfound" style="display: none;">
+<% else %>
+  <div id="searchnotfound" style="display: block;">
+<% end %>
+    <% if @coupons_search == true %>
+      <h3>
+        ご指定のキーワードにマッチするクーポンはありませんでした。
+        <%= link_to "すべてのクーポンを表示", coupons_path %>
+      </h3>
+    <% elsif @shop_display_coupons == true %>
+			<h3>
+			  <%= @shop.name %>に属するクーポンが存在していません。
+      </h3>
+			<%= link_to "マイショップへ", shops_path %>
+    <% elsif @master_display_coupons == true %>
+			<h3>
+			  <%= @master.email %>に属するクーポンが存在していません。
+      </h3>
+			<%= link_to "マスター一覧へ", masters_path %>
+    <% elsif @customer_display_coupons == true %>
+			<h3>
+			  <%= @customer.email %>が有効なクーポンが所有していません。
+      </h3>
+			<%= link_to "カスタマー一覧へ", customers_path %>
+    <% else %>
+      <h3>
+        クーポンが存在していません。新しいクーポンを作成しましょう！
+        <%= link_to "新規作成へ", new_coupon_path %>
+      </h3>
+    <% end %>
+  </div>
+

@@ -1,0 +1,36 @@
+
+<% flash.each do |key, value| %>
+  <div class="notice">
+    <h3><%= value %></h3>
+  </div>
+<% end %>
+<%= render 'shared/error_messages_mobile', :object => @customer %>
+<%= form_for @customer do |f| %>
+	<%= f.label :email, "メールアドレス：", :class => "input_label" %>
+	<% if @customer.id.nil? %>
+		<%= f.text_field :email, :class => "input_field" %>
+	<% else %>
+		<%= f.text_field :email, :class => "input_field", :readonly => true %>
+	<% end %>
+
+	<%= f.label :password, "パスワード：", :class => "input_label" %>
+	<%= f.password_field :password, :class => "input_field" %>
+	<%= f.label :password_confirmation, "パスワード確認：", :class => "input_label" %>
+	<%= f.password_field :password_confirmation, :class => "input_field" %>
+	<%= f.label :birthday, "生年月日：", :class => "input_label" %> (例: 2010-01-01)
+	<%= f.text_field :birthday, :class => "input_field" %>
+	<%= f.label :gender_id, "性別：", :class => "input_label" %>
+	<br />
+	<%= f.collection_select :gender_id, Gender.find(:all), :id, :name, {}, :class => "input_select" %>
+	<br />
+	<center>
+  	<%= f.check_box :receive_notice %>クーポン通知を受信
+		<br />
+		<% if @customer.id.nil? %>
+			<%= f.submit "登録内容を送信", :class => "input_submit" %>
+		<% else %>
+			<%= f.submit "保存", :class => "input_submit" %>
+		<% end %>
+	</center>
+<% end %>
+

@@ -1,0 +1,18 @@
+<% if object.errors.any? %>
+  <div id="error_explanation">
+		<div class="header_wrap">
+		  <div class="header">
+		    <%= pluralize(object.errors.count, "") %>
+		    個のエラーが発生しました:
+		  </div>
+		</div>
+		<div class="content_wrap">
+		  <ul>
+		  <% object.errors.full_messages.each do |msg| %>
+		    <li><%= msg %></li>
+		  <% end %>
+		  </ul>
+		</div>
+  </div>
+<% end %>
+

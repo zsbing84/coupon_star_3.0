@@ -1,0 +1,173 @@
+ja:
+  activerecord:
+    models:
+      coupon: "クーポン"  #g
+      coupon_analysis_record: "クーポン分析記録"  #g
+      coupon_chart_display_general: "クーポンチャート表示一般的な"  #g
+      coupon_customer_rel: "クーポンお客様のrel"  #g
+      coupon_general: "クーポン種別"  #g
+      customer: "お客様"  #g
+      fine_print: "注意事項"  #g
+      gender: "性別"  #g
+      holiday: "休日"  #g
+      master: "マスター"  #g
+      open_hour: "営業時間"  #g
+      shop: "ショップ"  #g
+      shop_chart_display_general: "ショップチャート表示一般的な"  #g
+      shop_customer_rel: "ショップの顧客のrel"  #g
+      shop_general: "ショップ種別"  #g
+
+    attributes:
+      coupon:
+        title: "タイトル"  #g
+        content: "詳細"  #g
+        start_at: "利用開始日"  #g
+        end_at: "利用期限日"  #g
+        activated_at: "有効開始日"  #g
+        verification_code: "検証コード"  #g
+        active: "有効"  #g
+        available_count: "利用可能回数"  #g
+        young_targeted: "若者がターゲット"  #g
+        prime_targeted: "首相は、ターゲット"  #g
+        middle_targeted: "ミドルは、ターゲット"  #g
+        old_targeted: "オールドは、ターゲット"  #g
+        all_age_targeted: "対象年齢"  #g
+        male_targeted: "男性をターゲット"  #g
+        female_targeted: "女性をターゲット"  #g
+        all_gender_targeted: "対象すべての性別"  #g
+        photo_file_name: "写真ファイル名"  #g
+        photo_content_type: "写真コンテンツタイプ"  #g
+        photo_file_size: "写真ファイルのサイズ"  #g
+        photo_updated_at: "写真はで更新"  #g
+        shop_id: "ショップ"  #g
+        customers: "お客様"  #g
+        coupon_customer_rels: "クーポンお客様の親戚"  #g
+        fine_prints: "注意事項"  #g
+        coupon_analysis_records: "クーポン分析レコード"  #g
+        target: "ターゲット"  #g
+        photo: "写真"  #g
+
+      coupon_analysis_record:
+        name: "名称"  #g
+        is_current: "使用中"  #g
+        activated_at: "有効開始日"  #g
+        young_views: "若者はビュー"  #g
+        young_clicks: "ヤングクリック"  #g
+        prime_views: "首相は、ビュー"  #g
+        prime_clicks: "総理をクリック"  #g
+        middle_views: "ミドルは、ビュー"  #g
+        middle_clicks: "ミドルクリック"  #g
+        old_views: "オールドは、ビュー"  #g
+        old_clicks: "オールドクリック"  #g
+        male_views: "男性ビュー"  #g
+        male_clicks: "男性のクリック数"  #g
+        female_views: "女性は、ビュー"  #g
+        female_clicks: "女性をクリック"  #g
+        all_views: "すべてのビュー"  #g
+        all_clicks: "すべてのクリック数"  #g
+        coupon: "クーポン"  #g
+
+      coupon_chart_display_general:
+        name: "名称"  #g
+
+      coupon_customer_rel:
+        used: "使用済み"  #g
+        coupon: "クーポン"  #g
+        customer: "お客様"  #g
+        available_count: "残り利用回数"  #g
+
+      coupon_general:
+        name: "名称"  #g
+
+      customer:
+        email: "メールアドレス"  #g
+        active: "アクティブ"  #g
+        receive_notice: "クーポン通知を受信"  #g
+        birthday: "生年月日"  #g
+        age: "年齢"  #g
+        crypted_password: "暗号化されたパスワード"  #g
+        password_salt: "パスワード塩"  #g
+        persistence_token: "持続性のトークン"  #g
+        perishable_token: "トークンの生鮮"  #g
+        shops: "ショップ"  #g
+        coupons: "クーポン"  #g
+        shop_customer_rels: "ショップ顧客の親戚"  #g
+        coupon_customer_rels: "クーポンお客様の親戚"  #g
+        gender_id: "性別"  #g
+        password: "パスワード"  #g
+        password_confirmation: "パスワード確認"  #g
+
+      fine_print:
+        content: "注意事項詳細"  #g
+        coupon: "クーポン"  #g
+
+      gender:
+        name: "名称"  #g
+
+      holiday:
+        name: "名称"  #g
+
+      master:
+        email: "メールアドレス"  #g
+        admin: "管理者"  #g
+        active: "アクティブ"  #g
+        password: "パスワード"  #g
+        password_confirmation: "パスワード確認"  #g
+        crypted_password: "暗号化されたパスワード"  #g
+        password_salt: "パスワード塩"  #g
+        persistence_token: "持続性のトークン"  #g
+        perishable_token: "トークンの生鮮"  #g
+        shops: "ショップ"  #g
+
+      open_hour:
+        open_at: "開店時間"  #g
+        close_at: "閉店時間"  #g
+        shop: "ショップ"  #g
+
+      shop:
+        name: "店名"  #g
+        description: "詳細"  #g
+        address: "住所"  #g
+        postcode: "郵便番号"  #g
+        nearest_station: "最寄駅"  #g
+        phone_part_1: "電話番号パート1"  #g
+        phone_part_2: "電話番号パート2"  #g
+        phone_part_3: "電話番号パート3"  #g
+        holiday: "定休日"  #g
+        young_start_at: "カップル開始時に"  #g
+        prime_start_at: "首相の開始時に"  #g
+        middle_start_at: "ミドル開始時に"  #g
+        old_start_at: "オールド開始時に"  #g
+        male_start_at: "男性開始時に"  #g
+        female_start_at: "女性の開始時に"  #g
+        all_start_at: "すべての開始時に"  #g
+        young_followers: "若い信者"  #g
+        prime_followers: "プライム信者"  #g
+        middle_followers: "ミドル信者"  #g
+        old_followers: "オールド信者"  #g
+        male_followers: "男性信者"  #g
+        female_followers: "女性信者"  #g
+        all_followers: "すべての信者"  #g
+        photo_file_name: "写真ファイル名"  #g
+        photo_content_type: "写真コンテンツタイプ"  #g
+        photo_file_size: "写真ファイルのサイズ"  #g
+        photo_updated_at: "写真はで更新"  #g
+        shop_customer_rels: "ショップ顧客の親戚"  #g
+        customers: "お客様"  #g
+        coupons: "クーポン"  #g
+        open_hours: "営業時間"  #g
+        master: "マスター"  #g
+        phone_number: "電話番号"  #g
+        map: "地図"  #g
+        photo: "写真"  #g
+
+      shop_chart_display_general:
+        name: "名称"  #g
+
+      shop_customer_rel:
+        shop: "ショップ"  #g
+        customer: "お客様"  #g
+
+      shop_general:
+        name: "名称"  #g
+

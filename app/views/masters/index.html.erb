@@ -1,0 +1,15 @@
+
+<div class="masters">
+  <% flash.each do |key, value| %>
+    <div class="notice">
+      <h3><%= value %></h3>
+    </div>
+  <% end %>
+  <div class="panel">
+    <div class="panel-body">
+      <%= render '/masters/partials/search_form' %>
+      <%= render '/masters/partials/masters' %>
+      <%= render '/masters/partials/masters_not_found' %>
+    </div>
+  </div>
+</div>

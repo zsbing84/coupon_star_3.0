@@ -1,0 +1,379 @@
+
+html body #content #coupon_analysis{
+  padding:0 40px;
+  width:850px;
+  height:600px;
+  margin:auto;
+}
+
+html body #content #coupon_analysis .chart {
+  border-top:4px solid #1F2028;
+	margin:auto;
+  height:320px;
+	display:block;
+}
+
+html body #content #coupon_analysis .chart_form {
+  -moz-border-radius:14px 14px 14px 14px;
+  -moz-box-shadow:2px 2px 7px #151515;
+  background-color:#22232C;
+  margin:20px 0px 20px 0px;
+  padding:15px 20px 15px 20px;
+  display:block;
+}
+
+html body #content #coupon_analysis .chart_form .separator {
+  padding-left:5px;
+  padding-right:5px;
+}
+
+html body #content #coupon_analysis .chart_form .target {
+	margin-left: 15px;
+}
+
+html body #content #coupon_analysis .chart_form .destroy {
+	margin-left: 130px;
+	display:inline;
+}
+
+html body #content #coupon_analysis .part {
+  background-color:#191A20;
+  margin:20px;
+}
+
+html body #content .coupon_detail {
+  width:700px;
+  display:block;
+  margin:auto;
+}
+
+html body #content .coupon_detail .panel .panel-body .part {
+  padding-top:20px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-bottom:20px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part:last-child {
+	padding-top:20px;
+}
+
+html body #content .coupon_detail .panel .panel-body .submit_part {
+	padding-bottom:10px;
+  border-bottom:4px solid #1F2028;
+}
+
+html body #content .coupon_detail .panel .panel-body .submit {
+	padding-top:0;
+	padding-bottom:0px;
+}
+
+
+html body #content .coupon_detail .panel .panel-body .part .field #save{
+  margin-bottom:10px;
+  margin-left:20px;
+  width:80px;
+  padding:0;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .field ul{
+  margin-left:115px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .field a{
+  font-size: 15px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .field p {
+  margin-top: 10px;
+  margin-left: 180px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .field ul li{
+  list-style-type:square;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .field .sub_field {
+  margin-bottom:10px;
+  margin-left:100px;
+  width:420px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .target{
+  font-size: 13px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part.edit_end {
+  padding-bottom:15px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .field .sub_field .remove {
+  margin-left:10px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .field .photo {
+  margin-top:20px;
+  margin-left:100px;
+  margin-bottom:10px;
+  width:390px;
+  height:280px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .field .separator {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .field .target_gender_female_separator {
+  padding-left:23px;
+  padding-right:24px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .field .target_gender_all_separator {
+  padding-left:28px;
+  padding-right:28px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .create {
+  float:right;
+  margin-left:10px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .activate {
+  float: right;
+  margin-right:10px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .destroy {
+  margin-right:10px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .save{
+  margin-left:10px;
+  float:right;
+}
+
+html body #content .coupon_detail .panel .panel-body .part .view {
+  margin-left:10px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part h3{
+  width:180px;
+}
+
+html body #content .coupon_detail .panel .panel-body .part p{
+  padding-top:0px;
+  padding-bottom:0;
+  margin-bottom:0;
+  margin-right:0px;
+}
+
+html body #content .coupons {
+  margin:auto;
+  padding-top:40px;
+  width:740px;
+}
+
+html body #content .coupons .panel  {
+  -moz-border-radius:14px 14px 14px 14px;
+  -moz-box-shadow:2px 2px 7px #151515;
+  background-color:#22232C;
+  margin-bottom:20px;
+}
+
+html body #content .coupons .panel .panel-body #search_bar fieldset {
+  -moz-border-radius-topleft:14px;
+  -moz-border-radius-topright:14px;
+  padding-bottom:0;
+}
+
+html body #content .coupons .panel .panel-body #search_bar fieldset:active .text {
+  -moz-box-shadow:2px 2px 6px #232323;
+  background-color:#C2E3F3;
+}
+
+html body #content .coupons .panel .panel-body #search_bar fieldset h2 {
+  background-color:transparent;
+  float:left;
+  margin:0;
+  padding:0;
+  text-align:left;
+  width:240px;
+}
+
+html body #content .coupons .panel .panel-body #search_bar fieldset .field {
+  float:right;
+  text-align:right;
+  width:440px;
+}
+
+html body #content .coupons .panel .panel-body #search_bar fieldset .field label {
+  float:left;
+  font-size:12px;
+  line-height:26px;
+  padding-right:2px;
+  text-align:right;
+}
+
+html body #content .coupons .panel .panel-body #search_bar fieldset .field label .separator {
+  padding-left:5px;
+  padding-right:5px;
+}
+
+html body #content .coupons .panel .panel-body #search_bar fieldset .field .text {
+  float:right;
+}
+
+html body #content .coupons .panel .panel-body .pagination{
+  display:block;
+  padding:0px 0px 20px 40px;
+  height:20px;
+}
+
+html body #content .coupons .panel .panel-body .coupon {
+  border-top:4px solid #1F2028;
+  display:block;
+  overflow:hidden;
+  padding-bottom:10px;
+  padding-top:10px;
+}
+
+html body #content .coupons .panel .panel-body .part {
+  padding:10px 20px 10px 20px;
+}
+
+html body #content .coupons .panel .panel-body .part .item_image{
+	width: 80px;
+	height: 70px;
+}
+
+html body #content .coupons .panel .panel-body .part .sample_coupon_image{
+  background-image:url("/images/pc/sample_coupon.jpg");
+	width: 80px;
+	height: 70px;
+}
+
+html body #content .coupons .panel .panel-body .coupon:hover{
+  background-color: #1F2028;
+}
+
+html body #content .coupons .panel .panel-body .coupon:hover .coupon_title a {
+  color:#ffffff;
+}
+
+html body #content .coupons .panel .panel-body .coupon.last:hover {
+-moz-border-radius-bottomleft:14px;
+-moz-border-radius-bottomright:14px;
+}
+
+html body #content .coupons .panel .panel-body .coupon_head {
+  display:block;
+  overflow:hidden;
+  padding-bottom:10px;
+  height:20px;
+}
+
+html body #content .coupons .panel .panel-body .coupon .shop_name {
+  float:right;
+  display:block;
+  height:20px;
+	padding-top:0px;
+	padding-bottom:0px;
+  padding-right:30px;
+  width:240px;
+  text-align:right;
+}
+
+html body #content .coupons .panel .panel-body .coupon .shop_name a{
+  font-size: 15px;
+}
+
+html body #content .coupons .panel .panel-body .coupon {
+  display:block;
+  overflow:hidden;
+  height:70px;
+}
+
+html body #content .coupons .panel .panel-body .coupon .coupon_image {
+  cursor:pointer;
+  display:block;
+  float:left;
+  height:70px;
+  position:relative;
+  text-decoration:none;
+  width:95px;
+}
+
+html body #content .coupons .panel .panel-body .coupon .database {
+  background-position:0 0;
+  background-repeat:no-repeat;
+  display:block;
+  height:70px;
+  left:0;
+  overflow:visible;
+  position:absolute;
+  text-indent:-50000px;
+  top:0;
+  width:80px;
+}
+
+
+html body #content .coupons .panel .panel-body .coupon .coupon_title {
+  padding-top:10px;
+  float:left;
+}
+
+html body #content .coupons .panel .panel-body .coupon .coupon_title .separator {
+  padding-left:5px;
+  padding-right:5px;
+}
+
+html body #content .coupons .panel .panel-body .coupon .coupon_title h4 {
+  float:none;
+  font-size:15px;
+  font-weight:bold;
+  padding-top:10px;
+  line-height:20px;
+  margin:0;
+  width:330px;
+}
+
+html body #content .coupons .panel .panel-body .coupon .coupon_title h4 a {
+  color:#C6C9E2;
+  text-decoration:none;
+}
+
+html body #content .coupons .panel .panel-body .coupon ul.submenu {
+  margin:0;
+  float:right;
+  display:block;
+  width:270px;
+  padding-top:15px;
+}
+
+html body #content .coupons .panel .panel-body .coupon ul.submenu li {
+  display:block;
+  float:right;
+}
+
+html body #content .coupons .panel .panel-body .coupon ul.submenu li a {
+  -moz-border-radius:14px 14px 14px 14px;
+  background-color:#1F2028;
+  color:#82859E;
+  display:block;
+  padding:5px 24px;
+  text-decoration:none;
+}
+
+html body #content .coupons .panel .panel-body #searchnotfound {
+  border-top:4px solid #1F2028;
+  padding:20px;
+  text-align:center;
+}
+html body #content .coupons .panel .panel-body #searchnotfound h3 {
+  font-size:14px;
+}
+html body #content .coupons .panel .panel-body #searchnotfound h3 a:hover span {
+  text-decoration:none !important;
+}
+

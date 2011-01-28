@@ -1,0 +1,16 @@
+
+<div class="coupons">
+  <% flash.each do |key, value| %>
+    <div class="notice">
+      <h3><%= value %></h3>
+    </div>
+  <% end %>
+  <div class="panel">
+    <div class="panel-body">
+      <%= render '/coupons/partials/search_form' %>
+      <%= render '/coupons/partials/coupons' %>
+      <%= render '/coupons/partials/coupons_not_found' %>
+    </div>
+  </div>
+</div>
+

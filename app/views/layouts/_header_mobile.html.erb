@@ -1,0 +1,14 @@
+
+
+<div id="header">
+  <div id="logo">
+		<% if signed_in_customer? %>
+			<%= link_to "", root_path %>
+		<% else %>
+			<%= link_to "", customer_signin_path %>
+		<% end %>
+  </div>
+</div>
+<br />
+
+

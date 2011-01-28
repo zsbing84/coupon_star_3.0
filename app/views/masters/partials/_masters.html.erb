@@ -1,0 +1,29 @@
+<% for master in @masters %>
+  <div class="master part">
+    <%= link_to edit_master_path(master), :class => "master_image" do %>
+			<div class="sample_master_image"></div>
+    <% end %>
+    <div class="master_name">
+      <span class="count">
+        ショップ数： <%= master.get_shops.count%>
+        <span class="separator"></span>
+        クーポン数： <%= master.get_coupons.count %>
+      </span>
+      <h4>
+        <%= link_to master.email, edit_master_path(master) %>
+      </h4>
+    </div>
+    <div class="display_coupons">
+      <%= link_to "ショップ一覧へ", display_shops_master_path(master) %>
+			<span class="separator"></span>
+			<span class="separator"></span>
+			<%= link_to "クーポン一覧へ", display_coupons_master_path(master) %>
+    </div>
+    <ul class="submenu">
+      <li>
+        <%= link_to "マスター情報", edit_master_path(master), :class => "action_botton" %>
+      </li>
+    </ul>
+	</div>
+<% end %>
+

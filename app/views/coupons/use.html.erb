@@ -1,0 +1,29 @@
+
+
+<% if @result == true %>
+  <div class="top_division">完了確認</div>
+  <br /><br/ >
+
+  <div class="coupon_use">
+    <div class="coupon_use_successful_msg">
+	    ご利用を頂きまして、誠にありがとうございました。
+	    また今度ご利用を下さいませ！
+    </div>
+
+    <div id="dotline"></div>
+    <br />
+    クーポン検証コード:
+    <div class="coupon_use_verification_code">
+      <%= verification_code %>
+    </div>
+    <div id="dotline"></div>
+    <br />「確認」ボタンをお押しなりますと、マイクーポン画面へ戻ります。
+
+    <center>
+	    <%= link_to "確認", coupons_path %>
+    </center>
+  </div>
+<% else %>
+  <%= render '/coupons/partials/use_invalid_coupon_mobile' %>
+<% end %>
+

@@ -1,0 +1,35 @@
+
+<br />
+<hr class="hr" />
+<br />
+
+<% if signed_in_customer? %>
+  <%= image_tag "/images/mobile/softbank/emoji/emoji_1.gif", :size => "16*16" %>
+	<%= link_to "マイクーポン", coupons_path, :class => "footer_item" %>
+	<br />
+  <%= image_tag "/images/mobile/softbank/emoji/emoji_2.gif", :size => "16*16" %>
+	<%= link_to "マイショップ", shops_path %>
+	<br />
+  <%= image_tag "/images/mobile/softbank/emoji/emoji_3.gif", :size => "16*16" %>
+	<%= link_to "ショップ検索", shops_search_form_path %>
+	<br />
+  <%= image_tag "/images/mobile/softbank/emoji/emoji_9.gif", :size => "16*16" %>
+	<%= link_to "マイページ", edit_customer_path(current_customer) %>
+	<br />
+  <%= image_tag "/images/mobile/softbank/emoji/emoji_sharp.gif", :size => "16*16" %>
+	<%= link_to "ログアウト", customer_signout_path, :method => :delete %>
+<% else %>
+  <%= image_tag "/images/mobile/softbank/emoji/emoji_1.gif", :size => "16*16" %>
+	<%= link_to customer_signup_path do %>新規登録<% end %>
+	<br />
+  <%= image_tag "/images/mobile/softbank/emoji/emoji_2.gif", :size => "16*16" %>
+	<%= link_to customer_signin_path do %>ログイン<% end %>
+<% end %>
+
+<br /><br />
+<hr class="hr" />
+
+<center>
+	<div id="corp_image"></div>CouponStar
+</center>
+

@@ -1,0 +1,12 @@
+
+
+<div class="coupon_use_before_msg">
+	クーポンをご使用になる際に、この画面をスタッフにご提示を頂いた上、「クーポンを使用」ボタンをお押し下さい。<br />
+</div>
+<center>
+  <form action="/coupon_use" method='get' class="coupon_use_form">
+    <%= hidden_field_tag 'id', @coupon.id %>
+    <%= submit_tag "クーポンを使用"%>
+  </form>
+</center>
+

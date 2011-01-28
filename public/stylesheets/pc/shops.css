@@ -1,0 +1,340 @@
+
+html body #content .shop_analysis{
+  padding:0 40px;
+  width:850px;
+  height:600px;
+  margin:auto;
+}
+
+html body #content .shop_analysis .chart {
+  border-top:4px solid #1F2028;
+	margin:auto;
+  height:320px;
+	display:block;
+}
+
+html body #content .shop_analysis .chart_form {
+  -moz-border-radius:14px 14px 14px 14px;
+  -moz-box-shadow:2px 2px 7px #151515;
+  background-color:#22232C;
+  margin:20px 0px 20px 0px;
+  padding:15px 20px 15px 20px;
+  display:block;
+}
+
+html body #content .shop_analysis .chart_form .separator {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+html body #content .shop_analysis .part {
+  background-color:#191A20;
+  margin:20px;
+}
+
+html body #content .shop_detail {
+  width:700px;
+  display:block;
+  margin:auto;
+}
+
+html body #content .shop_detail .panel .panel-body .part {
+  padding-top:20px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-bottom:20px;
+}
+
+html body #content .shop_detail .panel .panel-body .part:last-child {
+	padding-top:20px;
+}
+
+html body #content .shop_detail .panel .panel-body .part .save {
+  float:right;
+  margin-left:20px;
+}
+
+html body #content .shop_detail .panel .panel-body .part .destroy {
+  float:right;
+  margin-left:10px;
+}
+
+html body #content .shop_detail .panel .panel-body .part h3{
+  width:180px;
+}
+
+html body #content .shop_detail .panel .panel-body .part .submit{
+  float: right;
+}
+
+html body #content .shop_detail .panel .panel-body .part div.map {
+	width: 390px;
+  height: 300px;
+	margin-left: 180px;
+	border: 1px dotted gray;
+}
+
+html body #content .shop_detail .panel .panel-body .fine_print_edit{
+  padding-top:0;
+}
+
+html body #content .shop_detail .panel .panel-body .fine_print_edit h3{
+  width:100px;
+  padding-top:0;
+}
+
+html body #content .shop_detail .panel .panel-body .part .separator {
+  padding-left:10px;
+  padding-right:10px;
+}
+
+html body #content .shop_detail .panel .panel-body .part .phone_separator {
+  padding-left:2px;
+  padding-right:2px;
+}
+
+html body #content .shop_detail .panel .panel-body .part .back {
+  float:right;
+}
+
+html body #content .shop_detail .panel .panel-body .part .field .sub_field {
+  margin-bottom:10px;
+  margin-left:100px;
+  width:420px;
+}
+
+html body #content .shop_detail .panel .panel-body .part .field p {
+  margin-top: 10px;
+  margin-left: 180px;
+}
+
+html body #content .shop_detail .panel .panel-body .part .field a{
+  font-size: 14px;
+}
+
+html body #content .shop_detail .panel .panel-body .part .field .sub_field:last-child {
+  margin-bottom:0px;
+}
+
+
+html body #content .shop_detail .panel .panel-body .part .field .sub_field .remove {
+  margin-left:10px;
+}
+
+html body #content .shop_detail .panel .panel-body .part .field .photo {
+  margin-top:20px;
+  margin-left:100px;
+  margin-bottom:10px;
+  width:390px;
+  height:280px;
+}
+
+html body #content .shops {
+  margin:auto;
+  padding-top:40px;
+  width:740px;
+}
+
+html body #content .shops .panel  {
+  -moz-border-radius:14px 14px 14px 14px;
+  -moz-box-shadow:2px 2px 7px #151515;
+  background-color:#22232C;
+  margin-bottom:20px;
+}
+
+html body #content .shops .panel .panel-body #search_bar fieldset {
+  -moz-border-radius-topleft:14px;
+  -moz-border-radius-topright:14px;
+  padding-bottom:0;
+}
+
+html body #content .shops .panel .panel-body #search_bar fieldset:active .text {
+  -moz-box-shadow:2px 2px 6px #232323;
+  background-color:#C2E3F3;
+}
+
+html body #content .shops .panel .panel-body #search_bar fieldset h2 {
+  background-color:transparent;
+  float:left;
+  margin:0;
+  padding:0;
+  text-align:left;
+  width:240px;
+}
+
+html body #content .shops .panel .panel-body #search_bar fieldset .field {
+  float:right;
+  text-align:right;
+  width:440px;
+}
+
+html body #content .shops .panel .panel-body #search_bar fieldset .field label {
+  float:left;
+  font-size:12px;
+  line-height:26px;
+  padding-right:5px;
+  text-align:right;
+}
+
+html body #content .shops .panel .panel-body #search_bar fieldset .field .text {
+  float:right;
+}
+
+html body #content .shops .panel .panel-body .pagination{
+  display:block;
+  padding:0px 0px 20px 40px;
+  height:20px;
+}
+
+html body #content .shops .panel .panel-body .shop {
+  border-top:4px solid #1F2028;
+  display:block;
+  overflow:hidden;
+  padding-bottom:10px;
+  padding-top:10px;
+}
+html body #content .shops .panel .panel-body .part {
+  padding:10px 20px 10px 20px;
+}
+
+html body #content .shops .panel .panel-body .part .item_image{
+	width: 80px;
+	height: 70px;
+}
+
+html body #content .shops .panel .panel-body .part .sample_shop_image{
+  background-image:url("/images/pc/sample_shop.jpg");
+	width: 80px;
+	height: 70px;
+}
+
+html body #content .shops .panel .panel-body .shop:hover{
+  background-color: #1F2028;
+}
+
+html body #content .shops .panel .panel-body .shop:hover .shop_name a {
+  color:#ffffff;
+}
+
+html body #content .shops .panel .panel-body .shop.last:hover {
+-moz-border-radius-bottomleft:14px;
+-moz-border-radius-bottomright:14px;
+}
+
+html body #content .shops .panel .panel-body .shop {
+  display:block;
+  overflow:hidden;
+  height:70px;
+}
+
+html body #content .shops .panel .panel-body .shop .display_coupons {
+  float:right;
+  display:block;
+  height:20px;
+	padding-top:0px;
+	padding-bottom:0px;
+  padding-right:30px;
+  width:240px;
+  text-align:right;
+}
+
+html body #content .shops .panel .panel-body .shop .display_coupons a{
+  font-size: 15px;
+}
+
+html body #content .shops .panel .panel-body .shop .shop_image {
+  cursor:pointer;
+  display:block;
+  float:left;
+  height:70px;
+  position:relative;
+  text-decoration:none;
+  width:95px;
+}
+
+html body #content .shops .panel .panel-body .separator {
+  padding-left:5px;
+  padding-right:5px;
+}
+
+html body #content .shops .panel .panel-body .shop .database {
+  background-position:0 0;
+  background-repeat:no-repeat;
+  display:block;
+  height:70px;
+  left:0;
+  overflow:hidden;
+  position:absolute;
+  text-indent:-50000px;
+  top:0;
+  width:80px;
+}
+
+html body #content .shops .panel .panel-body .shop .shop_name {
+  padding-top:10px;
+  float:left;
+}
+
+html body #content .shops .panel .panel-body .shop .shop_name h4 {
+  float:none;
+  font-size:16px;
+  font-weight:bold;
+  padding-top:10px;
+  line-height:20px;
+  margin:0;
+  width:320px;
+}
+
+html body #content .shops .panel .panel-body .shop .shop_name h4 a {
+  color:#C6C9E2;
+  text-decoration:none;
+}
+
+html body #content .shops .panel .panel-body .shop ul.submenu {
+  margin:0;
+  float:right;
+  display:block;
+  width:270px;
+  padding-top:15px;
+}
+
+html body #content .shops .panel .panel-body .shop ul.submenu li {
+  display:block;
+  float:right;
+}
+
+html body #content .shops .panel .panel-body .shop ul.submenu li a {
+  -moz-border-radius:14px 14px 14px 14px;
+  background-color:#1F2028;
+  color:#82859E;
+  display:block;
+  padding:5px 24px;
+  text-decoration:none;
+}
+
+html body #content .shops .panel .panel-body .shop_foot {
+  display:block;
+  overflow:hidden;
+  padding-bottom:10px;
+  padding-top:10px;
+  height:20px;
+}
+
+html body #content .shops .panel .panel-body .shop_foot .count {
+  height:20px;
+  margin-left:20px;
+  width:200px;
+}
+
+html body #content .shops .panel .panel-body #searchnotfound {
+  border-top:4px solid #1F2028;
+  padding:20px;
+  text-align:center;
+}
+html body #content .shops .panel .panel-body #searchnotfound h3 {
+  font-size:14px;
+}
+html body #content .shops .panel .panel-body #searchnotfound h3 a:hover span {
+  text-decoration:none !important;
+}
+

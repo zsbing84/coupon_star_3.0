@@ -1,0 +1,10 @@
+<div class="fields sub_field"">
+  <%= f.text_field :content, :size => "40", :maxlength => "20", :disabled => @coupon.active %>
+  <%= f.hidden_field :_destroy %>
+  <% if !@coupon.active %>
+    <span class="remove">
+      <%= link_to_remove_fine_print_field "削除", f %>
+    </span>
+  <% end %>
+</div>
+

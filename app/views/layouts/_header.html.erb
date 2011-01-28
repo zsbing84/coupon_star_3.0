@@ -1,0 +1,107 @@
+<div id="header">
+  <div id="logo">
+		<% if signed_in_master? %>
+			<%= link_to "", root_path %>
+		<% else %>
+			<%= link_to "", master_signin_path %>
+		<% end %>
+  </div>
+	<div class="header_links">
+		<ul class="account-links inline">
+	    <% if signed_in_master? %>
+	      <div id="logged-in-links" style="display: block;">
+	        <% if @header_new_coupon == true %>
+	          <li class="active">
+	        <% else %>
+	          <li>
+	        <% end %>
+	          <%= link_to "クーポン作成", new_coupon_path %>
+	        </li>
+
+	        <% if @header_new_shop == true %>
+	          <li class="active">
+	        <% else %>
+	          <li>
+	        <% end %>
+	          <%= link_to "ショップ作成", new_shop_path %>
+	        </li>
+
+	        <% if @header_coupons == true %>
+	          <li class="active">
+	        <% else %>
+	          <li>
+	        <% end %>
+						<% if admin_master? %>
+							<%= link_to "クーポン一覧", coupons_path %>
+						<% else %>
+	          	<%= link_to "マイクーポン", coupons_path %>
+						<% end %>
+	        </li>
+
+	        <% if @header_shops == true %>
+	          <li class="active">
+	        <% else %>
+	          <li>
+	        <% end %>
+						<% if admin_master? %>
+							<%= link_to "ショップ一覧", shops_path %>
+						<% else %>
+	          	<%= link_to "マイショップ", shops_path %>
+						<% end %>
+	        </li>
+
+	        <% if @header_account == true %>
+	          <li class="active">
+	        <% else %>
+	          <li>
+	        <% end %>
+	          <%= link_to "マイページ", edit_master_path(current_master) %>
+	        </li>
+	     		<li><%= link_to "ログアウト", master_signout_path, :method => :delete %></li>
+				</div>
+	    <% else %>
+	      <li><%= link_to "ログイン", master_signin_path %></li>
+	    <% end %>
+	  </ul>
+		<% if admin_master? %>
+      <div class="admin_links">
+        <ul class="account-links inline">
+				  <div id="logged-in-links" style="display: block;">
+					  <% if @header_new_master == true %>
+			        <li class="active">
+			      <% else %>
+			        <li>
+			      <% end %>
+			        <%= link_to "マスター作成", new_master_path %>
+			      </li>
+
+			      <% if @header_new_customer == true %>
+			        <li class="active">
+			      <% else %>
+			        <li>
+			      <% end %>
+			        <%= link_to "カスタマー作成", new_customer_path %>
+			      </li>
+
+			      <% if @header_masters == true %>
+			        <li class="active">
+			      <% else %>
+			        <li>
+			      <% end %>
+			        <%= link_to "マスター一覧", masters_path %>
+			      </li>
+
+			      <% if @header_customers == true %>
+			        <li class="active">
+			      <% else %>
+			        <li>
+			      <% end %>
+			        <%= link_to "カスタマー一覧", customers_path %>
+			      </li>
+				  </div>
+			  </ul>
+      </div>
+		<% end %>
+	</div>
+</div>
+

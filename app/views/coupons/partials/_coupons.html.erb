@@ -1,0 +1,36 @@
+
+<% for coupon in @coupons %>
+  <div class="coupon part">
+    <%= link_to edit_coupon_path(coupon), :class => "coupon_image" do %>
+      <% if !coupon.photo_file_name.nil? %>
+		    <div class="item_image">
+				    <%= image_tag coupon.photo.url(:small) %>
+		    </div>
+	    <% else %>
+		    <div class="sample_coupon_image"></div>
+	    <% end %>
+    <% end %>
+    <div class="coupon_title">
+      <span class="count">
+          閲覧数： <%= coupon.viewed_count %>
+        <span class="separator"></span>
+          利用数： <%= coupon.clicked_count %>
+      </span>
+      <h4>
+        <%= link_to coupon.title, edit_coupon_path(coupon) %>
+      </h4>
+    </div>
+	  <div class="shop_name">
+      <%= link_to coupon.shop.name, edit_shop_path(coupon.shop) %>
+    </div>
+    <ul class="submenu">
+      <li>
+        <%= link_to "利用分析", analysis_coupon_path(coupon) %>
+      </li>
+      <li>
+        <%= link_to "クーポン情報", edit_coupon_path(coupon) %>
+      </li>
+    </ul>
+  </div>
+<% end %>
+

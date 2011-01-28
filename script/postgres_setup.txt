@@ -1,0 +1,102 @@
+http://www.nateirwin.net/2007/10/06/setting-up-a-windows-ruby-on-rails-development-environment/
+
+
+
+
+
+
+
+
+
+
+
+
+Setting Up a Windows Ruby on Rails Development Environment
+
+by Nate on October 6, 2007
+
+Rails
+
+I just recently decided to start working with Ruby on Rails, as IÅfm interested in seeing why it has become all the rage these days. Before I could start learning Ruby on Rails, I, of course, first needed to setup a development environment on my Windows desktop to help get me started. Well, thereÅfs a ton of documentation and help available online to aid us helpless Windows users, but I was unable to find a comprehensive walk through or discussion. It seems there really is no single definitive solution (there is no real IDE like Visual Studio in the Ruby world and there are myriad ways to do things). Through quite a bit of research, however, I was finally able to make a (somewhat) informed decision on what I wanted my environment to look like. This post will detail the setup that I chose, with instructions on getting it up and running on your own Windows desktop.
+
+First, a couple of quick notes about the technologies:
+
+e ? Text Editor: Although I mentioned that there doesnÅft seem to be agreement as to what the best way to setup a Ruby on Rails development environment (on the Windows platform) is, there is definitely consensus among the masses as to what the best editor for programming in Ruby is: TextMate. Unfortunately, however, TextMate is Mac only, so for those of us who use Windows, weÅfll have to settle for something else. Well, after much reading and going back and forth, I decided to go with e ? Text Editor. It is supposed to be the closest thing to TextMate that you can get on a PC; it even supports TextMate command and snippets. I have a little bit of experience with e, as I used it through many of its initial betas. But as soon as it came out of beta I had to either pay up or move on to something else. Well, at the time I chose to stick with good Åeole Notepad++, as itÅfs open source and meets most of my needs. After reading all of eÅfs recent praises, however, IÅfve decided to give it another try, and this time IÅfll dig deep to see what kind of advantages it offers. At first glance it does seem incredibly powerful, and its integrated packages make it ideal for developing in a number of languages.
+
+Cygwin: Most of you Windows users probably already have some experience with Cygwin, but for those who donÅft, hereÅfs a quick rundown. Cygwin is Åga Linux-like environment for WindowsÅh that allows Windows users to take advantage of the power of a lot of the Linux tools without actually running Linux.
+
+PostgreSQL: IÅfve used PostgreSQL in the past, and will be using it on a new project that IÅfm working on, so I thought IÅfd give it a spin. That said, there are many databases out there, so you should choose the one that best meets your needs. If you want to use a different database and need help on the installation, however, youÅfll have to find it somewhere else, as IÅfll be covering installation of and connection to PostgreSQL in this post.
+
+Before I go on, a few disclaimers:
+
+    * I set this environment up on a Windows Vista Ultimate x64 box, and havenÅft tested it on any other operating systems.
+    * I do have both the Ågstandalone WindowsÅh and Cygwin environments installed on my machine, but have read in *numerous places that this can cause problems. I havenÅft had any issues as of yet, but am definitely living on the edge. You may not want to.
+
+Note: Other than trying to figure out for yourself which environment best meets your needs, there is really no reason to install both the Ågstandalone WindowsÅh and Cygwin environments on your machine. So unless you like to experiment and play around with different configurations and tools, youÅfll probably want to choose one or the other.
+
+Setting Up a Standalone Windows Environment
+
+I decided to setup a standalone Windows environment in addition to the Cygwin environment, as I read in a couple of places that Ruby on Rails on Cygwin doesnÅft perform all that well. That said, I havenÅft had any major performance issues with the Cygwin environment up to this point.
+
+1. Install e ? Text Editor ? There is a 30 day free full-featured trial available. If you like it, though, youÅfll have to pay $34.95 for a license.
+
+2. Install Ruby via the Windows Installer.
+
+3. Install RubyGems.
+
+4. Install Rails:
+
+   1. In the command prompt, type gem install rails ?include-dependencies.
+   2. If this doesnÅft work, youÅfve likely got RubyGems problems. You can download the stand-alone package for Rails and install from there, but youÅfll likely want to take care of your RubyGems issues before moving on.
+
+5. Create a Rails Application:
+
+   1. In the command prompt, use cd to get to the directory where you want to create an application.
+   2. In the command prompt, type rails ApplicationName and hit enter.
+
+6. Install PostgreSQL:
+
+   1. Download the latest win32 version of PostgreSQL (64-bit is not currently supported on Windows systems).
+   2. Initiate the installer and walk through the wizard. A couple of potential ÅggotchaÅh spots:
+         1. Let the installer create a new Windows account so PostgreSQL can run as a service (I accepted the default postgres account and specified my own password).
+         2. Let the database initialize a cluster for you.
+   3. Install postgres-pr gem, which is a Ruby driver for PostgreSQL:
+         1. Command line: gem install postgres-pr.
+         2. Using the pgAdminIII gui that is installed by default with PostgreSQL, create your application databases. Follow the Ruby on Rails naming convention of ApplicationName_development, ApplicationName_test, ApplicationName_production when naming them.
+   4. Configure your application to connect to the database(s):
+         1. Open up your config/database.yml file and enter the following information for, at the very least, the development database:
+               1. adapter: postgresql
+               2. database: your_database
+               3. username: postgres
+               4. password: YourPassword
+               5. host: localhost (assuming that youÅfre running PostgreSQL locally)
+   5. Test your database connectivity:
+         1. From the top level of your Rails application, type the following at a command prompt: rake db:migrate.
+         2. If you get a response similar to this: (in c:/dev/YourWebApplication), you are good to go. If you get an error message, walk through the steps again, double-checking your configuration and fixing any mistakes (a Google search of the error is probably the best place to start).
+
+Setting Up a Cygwin Environment
+
+1. Install e ? Text Editor ? There is a 30 day free full-featured trial available. If you like it, though, youÅfll have to pay $34.95 for a license.
+
+2. Install Cygwin:
+
+   1. Download the Cygwin Setup.exe and double-click it to initiate the install.
+   2. Step through the install wizard, accepting the defaults until you get to the ÅgSelect PackagesÅh dialog.
+   3. In the ÅgSelect PackagesÅh dialog, make sure that Ruby and Subversion are installed.
+
+3. Install Ruby Gems:
+
+   1. Download the latest version.
+   2. From a Cygwin prompt, type: ruby Ågpathtorubygemsdownloaddirectory\setup.rbÅh
+
+4. Install Console ? This isnÅft required, but itÅfs pretty nifty. Note that I had issues with a couple of the Console versions on Vista Ultimate x64. I finally found a version that has worked well for me. It is 2.00.125. See credit for this discovery in the links at the end of this post.
+
+5. Setup e ? Text Editor to open from Cygwin:
+
+   1. Setup a Windows Path variable to point to C:\Program Files (x86)\e
+   2. Open up your Cygwin .bashrc (if per user, itÅfs located at C:\Cygwin\Home\UserName) and add Ågalias e=Åfcygstart eÅfÅh under the ÅgAliasesÅh section.
+
+Helpful Resources That Guided Me in the Right Direction:
+
+    * A Mac-esque Rails Development Environment on Windows ? A very helpful blog entry that details setting up a Rails development environment on Cygwin. Through this entry, I discovered Console, the sweet command line utility that I mentioned in the ÅgSetting Up a Cygwin EnvironmentÅh section above, and how to setup e ? Text Editor to open from within Cygwin.
+    * So far, itÅfs RoR blog ? A general Ruby on Rails (on Windows) blog that contains some useful information.

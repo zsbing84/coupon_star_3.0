@@ -1,0 +1,9 @@
+
+
+<center>
+	<form action="/coupons_search" method='get' class="search_form">
+		<%= text_field_tag :keywords, params[:keywords], :class => "search_field" %>
+		<%= hidden_field_tag 'customer_id', @current_customer.id %>
+		<%= submit_tag "検索", :class => "search_submit" %>
+	</form>
+</center>

@@ -1,0 +1,19 @@
+
+<div class="shop_analysis">
+  <%= render '/shared/highcharts_theme' %>
+  <div class="part">
+  	<div class="chart_form" >
+	    <%= render '/shops/partials/chart_form' %>
+    </div>
+  </div>
+  <div class="part">
+    <div id="age_dist_chart" class="chart"></div>
+  </div>
+
+  <div class="part">
+    <div id="gender_dist_chart" class="chart"></div>
+  </div>
+  <%= high_chart("age_dist_chart", @age_dist_chart) %>
+  <%= high_chart("gender_dist_chart", @gender_dist_chart) %>
+</div>
+

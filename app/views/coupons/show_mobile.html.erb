@@ -1,0 +1,71 @@
+
+
+<div class="top_division">クーポン情報</div>
+<br />
+
+<center>
+  <span class="coupon_detail_title" ">
+	  <%= @coupon.title %>
+  </span>
+  <br /><br />
+</center>
+<div id="dotline"></div>
+
+<% if !@coupon.photo_file_name.nil? %>
+  <div class="item_image">
+    <%= image_tag @coupon.photo.url(:thumb)%>
+  </div>
+<% else %>
+  <div class="sample_coupon_image"></div>
+<% end %>
+
+<span>
+  クーポン提供：<br />
+	<%= link_to @coupon.shop.name, @coupon.shop, :class => "coupon_detail_shop_name" %>
+</span>
+
+<br />
+
+<div style="clear: both;"></div>
+  <br />
+	利用可能回数： 残り<%= available_count(@coupon) %>回
+<br />
+<div id="dotline"></div>
+<br />
+
+
+<%= render '/coupons/partials/use_coupon_form_mobile' %>
+
+<div class="input_label">■タイトル：</div>
+<div class="input_field"><%= @coupon.title %></div>
+<br />
+
+<div id="dotline"></div>
+<div class="input_label">■利用開始日：</div>
+<div class="input_field"><%= @coupon.start_at.strftime("%Y年%m月%d日") %></div>
+<br />
+
+<div id="dotline"></div>
+<div class="input_label">■利用期限日：</div>
+<div class="input_field"><%= @coupon.end_at.strftime("%Y年%m月%d日") %></div>
+<br />
+
+<div id="dotline"></div>
+<div class="input_label">■クーポン詳細：</div>
+<div class="input_field"><%= @coupon.content %></div>
+<br />
+
+<div id="dotline"></div>
+<div class="input_label">■注意事項：</div>
+<div class="input_field">
+  <% if @coupon.fine_prints.count == 0 %>
+    ・特になし。
+  <% else %>
+    <% for fine_print in @coupon.fine_prints %>
+	    ・<%= fine_print.content %>
+		  <br />
+	  <% end %>
+  <% end %>
+
+</div>
+

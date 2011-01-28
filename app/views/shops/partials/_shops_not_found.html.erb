@@ -1,0 +1,28 @@
+<% if @shops.count != 0 %>
+  <div id="searchnotfound" style="display: none;">
+<% else %>
+  <div id="searchnotfound" style="display: block;">
+<% end %>
+    <% if @shops_search == true %>
+      <h3>
+        ご指定のキーワードにマッチするショップはありませんでした。
+        <%= link_to "すべてのショップを表示", shops_path %>
+      </h3>
+    <% elsif @master_display_shops == true %>
+			<h3>
+			  <%= @master.email %>に属するショップが存在していません。
+      </h3>
+			<%= link_to "マスター一覧へ", masters_path %>
+    <% elsif @customer_display_shops == true %>
+			<h3>
+			  <%= @customer.email %>にフォローされているショップが存在していません。
+      </h3>
+			<%= link_to "カスタマー一覧へ", customers_path %>
+    <% else %>
+      <h3>
+        ショップが存在していません。新しいショップを作成しましょう！
+        <%= link_to "新規作成へ", new_shop_path %>
+      </h3>
+    <% end %>
+  </div>
+

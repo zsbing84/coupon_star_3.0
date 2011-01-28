@@ -1,0 +1,18 @@
+<% if @masters.count != 0 %>
+  <div id="searchnotfound" style="display: none;">
+<% else %>
+  <div id="searchnotfound" style="display: block;">
+<% end %>
+    <% if @masters_search == true %>
+      <h3>
+        ご指定のキーワードにマッチするマスターはありませんでした。
+        <%= link_to "すべてのマスターを表示", masters_path %>
+      </h3>
+    <% else %>
+      <h3>
+        マスターが存在していません。新しいマスターを作成しましょう！
+        <%= link_to "新規作成へ", new_master_path %>
+      </h3>
+    <% end %>
+  </div>
+

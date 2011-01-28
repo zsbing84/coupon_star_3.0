@@ -1,0 +1,37 @@
+<% for shop in @shops %>
+  <div class="shop part">
+    <%= link_to edit_shop_path(shop), :class => "shop_image" do %>
+      <% if !shop.photo_file_name.nil? %>
+		    <div class="item_image">
+				    <%= image_tag shop.photo.url(:small) %>
+		    </div>
+	    <% else %>
+		    <div class="sample_shop_image"></div>
+	    <% end %>
+    <% end %>
+    <div class="shop_name">
+      <span class="count">
+        クーポン数： <%= shop.coupons.count %>
+        <span class="separator"></span>
+        フォロワー数： <%= shop.customers.count%>
+      </span>
+      <h4>
+        <%= link_to shop.name, edit_shop_path(shop) %>
+      </h4>
+    </div>
+    <div class="display_coupons">
+      <%= link_to "クーポン一覧へ", display_coupons_shop_path(shop) %>
+    </div>
+    <ul class="submenu">
+      <li>
+        <%= link_to "フォロワー分析", analysis_shop_path(shop), :class => "action_botton" %>
+      </li>
+      <li>
+        <%= link_to "ショップ情報", edit_shop_path(shop), :class => "action_botton" %>
+      </li>
+    </ul>
+	</div>
+<% end %>
+
+
+

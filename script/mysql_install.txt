@@ -1,0 +1,38 @@
+Run Ruby, Gems, Rails, MySQL and RMagick on Cygwin
+Before using cygwin, I did not expect that the commands of rails do not work in cygwin. To make ruby, gems and rails to work, there are some additional tasks to do as following:
+
+        * Add devel -> make + ruby + gcc + subversion modules from cygwin installation
+        * Download gems tgz install package from Ruby Gems download home
+        * tar xzvf rubygems-1.0.x.tgz
+        * cd rubygems-1.0.x
+        * unset RUBYOPT (before install gems, clear RUBYOPT=rubygems)
+        * ruby setup.rb
+        * gem install rails --include-dependencies
+        * Download mysql source tar.gz file from MySQL download page
+        * tar xzvf mysql-5.0.45.tar.gz
+        * cd mysql-5.0.45
+        * ./configure
+        * make install ( or to do it faster, just make install under sub directories libmysql and include.
+        * gem install mysql
+        * Change the database server from localhost to 127.0.0.1 in the database.yml of your rails app
+        * Install ImageMagick, libmagick-devel, XFree86-lib-compat, xorg-x11-devel, libbz2-devel module from cygwin installation file
+        * gem install RMagick
+        * ruby script/server. voila!
+
+
+bug:
+
+mysql 5.4.0
+
+checking for termcap functions library... configure: error: No curses/termcap library
+libedit
+
+make distclean
+./configure --without-readline CFLAGS=-O2
+
+
+
+
+
+
+Setting up Ruby + Gems on CygWin

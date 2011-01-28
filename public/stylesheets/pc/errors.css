@@ -1,0 +1,58 @@
+.field_with_errors {
+  padding: 2px;
+  background-color: #A11C39;
+  display: inline-table;
+}
+
+.field_with_errors label {
+  color: #fff;
+}
+
+#error_explanation {
+  -moz-box-shadow: 0 0 10px #040307;
+  -moz-border-radius: 7px 7px 7px 7px;
+  border: 0 none;
+  margin-bottom: 20px;
+  background-color: #A11C39;
+  background-image: url("/images/pc/notice-error-bkg.png");
+}
+
+#error_explanation .header_wrap {
+  -moz-box-shadow: 0 0 10px #040307;
+  -moz-border-radius: 7px 7px 7px 7px;
+  padding-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#error_explanation .content_wrap {
+  -moz-box-shadow: 0 0 10px #040307;
+  -moz-border-radius: 0px 0px 7px 7px;
+  padding-bottom: 10px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation .header {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 30px;
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  background-image: url("/images/pc/notice-error-icon-35x35.png");
+  background-position: left center;
+  color: fff;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  padding-top: 10px;
+  font-size: 14px;
+  margin-left: 25px;
+  list-style: square;
+  color: #A11C39;
+}

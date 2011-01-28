@@ -1,0 +1,6 @@
+
+
+<%= form_for current_customer.shop_customer_rels.find_by_shop_id(@shop),
+             :html => { :method => :delete, :class => "follow_form" } do |f| %>
+  <%= f.submit "フォローを解除" %>
+<% end %>

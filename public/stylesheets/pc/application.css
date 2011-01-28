@@ -1,0 +1,904 @@
+「@charset ‘UTF-8′;」
+html, body {
+  background-color:#191A20;
+  background-image:url("/images/pc/header-shadow.png");
+  background-position:0 76px;
+  background-repeat:repeat-x;
+  border:0 none;
+  color:#82859E;
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font-size:100%;
+  font-style:inherit;
+  font-weight:inherit;
+  margin:0;
+  min-width:1000px;
+  padding:0 0 50px;
+  vertical-align:baseline;
+}
+
+html textarea, body textarea {
+  -moz-border-radius:3px 3px 3px 3px;
+  background-color:#C9C3E6;
+  border:medium none;
+  font-size:12px;
+  padding:7px;
+  width:auto;
+}
+
+html input[type="text"], html input[type="password"], body input[type="text"], body input[type="password"] {
+  -moz-border-radius:3px 3px 3px 3px;
+  background-color:#C9C3E6;
+  font-size:12px;
+  padding:7px;
+}
+
+html input[type="checkbox"], body input[type="checkbox"] {
+  margin-right:5px;
+}
+
+html input.submit, html input.button, html a.submit, html a.button, body input.submit, body input.button, body a.submit, body a.button {
+  -moz-border-radius:14px 14px 14px 14px;
+  -moz-box-shadow:2px 2px 6px #232323;
+  background-color:#9E8AFF;
+  background-image:url("/images/button-smooth.png");
+  background-position:center bottom;
+  background-repeat:repeat-x;
+  color:#16153B;
+  cursor:pointer;
+  display:inline-block;
+  font-size:14px;
+  font-weight:bold;
+  height:28px;
+  line-height:27px;
+  margin:0;
+  padding:1px 20px 3px;
+  text-decoration:none;
+  text-shadow:0 0 2px #C9C3E6;
+  vertical-align:top;
+}
+
+html input.submit:hover, html input.button:hover, html a.submit:hover, html a.button:hover, body input.submit:hover, body input.button:hover, body a.submit:hover, body a.button:hover {
+  text-decoration:none;
+}
+
+html input.submit:hover, html input.button:hover, html a.submit:hover, html a.button:hover, body input.submit:hover, body input.button:hover, body a.submit:hover, body a.button:hover {
+  background-color:#C9C3E6;
+}
+
+html input.submit.disabled, html input.button.disabled, html a.submit.disabled, html a.button.disabled, body input.submit.disabled, body input.button.disabled, body a.submit.disabled, body a.button.disabled {
+  background-color:#555555;
+  color:#191A20;
+  text-shadow:0 0 2px #AAAAAA;
+}
+
+html input.submit.add, html input.submit.remove, html input.button.add, html input.button.remove, html a.submit.add, html a.submit.remove, html a.button.add, html a.button.remove, body input.submit.add, body input.submit.remove, body input.button.add, body input.button.remove, body a.submit.add, body a.submit.remove, body a.button.add, body a.button.remove {
+  -moz-border-radius:0 0 0 0;
+  -moz-box-shadow:none;
+  background-color:transparent;
+  background-image:none;
+  background-position:left top;
+  background-repeat:no-repeat;
+  display:inline-block;
+  height:30px;
+  margin:0;
+  overflow:hidden;
+  padding:0;
+  text-indent:-9000px;
+  width:30px;
+}
+
+html input.submit.add, html input.button.add, html a.submit.add, html a.button.add, body input.submit.add, body input.button.add, body a.submit.add, body a.button.add {
+  background-image:url("/images/form-button-add.png");
+}
+
+html input.submit.remove, html input.button.remove, html a.submit.remove, html a.button.remove, body input.submit.remove, body input.button.remove, body a.submit.remove, body a.button.remove {
+  background-image:url("/images/form-button-remove.png");
+}
+
+html .link_button {
+  -moz-border-radius:14px 14px 14px 14px;
+  -moz-box-shadow:2px 2px 6px #232323;
+  background-color:#777777;
+  background-image:url("/images/button-smooth-red.png");
+  background-position:center bottom;
+  background-repeat:repeat-x;
+  color:#0E0909;
+  cursor:pointer;
+  display:inline-block;
+  font-size:14px;
+  font-weight:bold;
+  height:28px;
+  line-height:27px;
+  margin:0;
+  padding:0 20px;
+  text-decoration:none;
+  text-shadow:0 0 2px #999999;
+  vertical-align:top;
+}
+
+html .link_button:hover {
+  text-decoration:none;
+  background-color:#ffffff;
+  color:#2A0B14;
+  text-shadow:0 0 2px #D07872;
+}
+
+html .notice, body .notice {
+  -moz-border-radius:7px 7px 7px 7px;
+  -moz-box-shadow:2px 2px 4px #1D1D1D;
+  background-color:#5987A0;
+  background-image:url("/images/pc/notice-bkg.png");
+  background-position:center bottom;
+  background-repeat:repeat-x;
+  color:#FFFFFF;
+  margin-bottom:15px;
+  padding:10px 10px 8px;
+}
+
+html .notice a, body .notice a {
+  color:#FFFFFF;
+  text-decoration:underline;
+}
+
+html .notice em, body .notice em {
+  -moz-border-radius:3px 3px 3px 3px;
+  padding:3px;
+}
+
+html .notice h3, body .notice h3 {
+  background-image:url("/images/pc/notice-icon-35x35.png");
+  background-position:left top;
+  background-repeat:no-repeat;
+  line-height:30px;
+  padding-left:35px;
+  padding-top:1px;
+}
+
+html .notice.success, body .notice.success {
+  background-color:#7C984C;
+  background-image:url("/images/notice-success-bkg.png");
+}
+
+html .notice.success em, body .notice.success em {
+  background-color:#D07872;
+  color:#40111F;
+}
+
+html .notice.success h3, body .notice.success h3 {
+  background:none repeat scroll 0 0 transparent;
+  line-height:24px;
+  padding-left:10px;
+}
+
+html .notice.error, body .notice.error {
+  background-color:#A11C39;
+  background-image:url("/images/pc/notice-error-bkg.png");
+}
+
+html .notice.error em, body .notice.error em {
+  background-color:#D07872;
+  color:#40111F;
+}
+
+html .notice.error h3, body .notice.error h3 {
+  background-image:url("/images/pc/notice-error-icon-35x35.png");
+  background-position:left top;
+  background-repeat:no-repeat;
+  padding-left:40px;
+}
+
+html form .overview, body form .overview {
+  padding:20px;
+}
+
+html form .notice, body form .notice {
+  margin-bottom:20px;
+  margin-left:20px;
+  margin-right:20px;
+}
+
+html form fieldset, body form fieldset {
+  border-top:4px solid #1F2028;
+  clear:both;
+  overflow:auto;
+  padding:20px 30px 15px;
+}
+
+html form fieldset:first-child, body form fieldset:first-child {
+  border-top-style:none;
+}
+
+html form fieldset:last-child, body form fieldset:last-child {
+  padding-bottom:0;
+}
+
+html form fieldset.active, body form fieldset.active {
+  background-color:#1F2028;
+}
+
+html form fieldset p.overview, body form fieldset p.overview {
+  padding:0 0 20px;
+}
+
+html form fieldset legend, html form fieldset h3, body form fieldset legend, body form fieldset h3 {
+  color:#BFB8E5;
+  padding-right:1em;
+}
+
+html form fieldset h3, body form fieldset h3 {
+  margin-bottom:20px;
+  padding-right:0;
+}
+
+html form fieldset .row, body form fieldset .row {
+  clear:both;
+  overflow:hidden;
+}
+
+html form fieldset .row:last-child, body form fieldset .row:last-child {
+  padding-bottom:0;
+}
+
+html form fieldset .row .field, body form fieldset .row .field {
+  float:left;
+  margin-right:20px;
+}
+
+html form fieldset .row .field:last-child, body form fieldset .row .field:last-child {
+  margin-right:0;
+}
+
+html form fieldset .formError, body form fieldset .formError {
+  clear:both;
+  color:#E1B5B6;
+  display:block;
+  font-size:12px;
+  margin:0;
+  padding-left:7px;
+  padding-top:7px;
+}
+
+html form fieldset .field, body form fieldset .field {
+  margin-bottom:15px;
+}
+
+html form fieldset .field label, body form fieldset .field label {
+  font-size:15px;
+  margin-bottom:2px;
+}
+
+html form fieldset .field label, html form fieldset .field input, html form fieldset .field .formError, body form fieldset .field label, body form fieldset .field input, body form fieldset .field .formError {
+  display:block;
+}
+
+html form fieldset .field .formError, body form fieldset .field .formError {
+  padding-left:0;
+  padding-top:2px;
+}
+
+html form fieldset .field.active select, html form fieldset .field.active .text, body form fieldset .field.active select, body form fieldset .field.active .text {
+  -moz-box-shadow:2px 2px 6px #232323;
+  background-color:#C2E3F3;
+}
+
+html form fieldset .field.active .selectbox, body form fieldset .field.active .selectbox {
+  background-image:url("/images/form-select-active-closed.png");
+}
+
+html form fieldset .field.active .selectbox.open, body form fieldset .field.active .selectbox.open {
+  -moz-border-radius-bottomleft:0;
+  -moz-border-radius-bottomright:0;
+  background-image:url("/images/form-select-active-open.png");
+}
+
+html form fieldset .field.error, body form fieldset .field.error {
+  color:#D07872;
+}
+
+html form fieldset .field.error select, html form fieldset .field.error .text, body form fieldset .field.error select, body form fieldset .field.error .text {
+  background-color:#D07872;
+}
+
+html form fieldset .field.error .selectbox, body form fieldset .field.error .selectbox {
+  background-image:url("/images/form-select-error-closed.png");
+}
+
+html form fieldset .field.error .selectbox.open, body form fieldset .field.error .selectbox.open {
+  background-image:url("/images/form-select-error-open.png");
+}
+html form fieldset .field.error .selectbox-wrapper, body form fieldset .field.error .selectbox-wrapper {
+  background-color:#D07872;
+}
+
+html form fieldset .field.error.active select, html form fieldset .field.error.active .text, body form fieldset .field.error.active select, body form fieldset .field.error.active .text {
+  background-color:#E1B5B6;
+}
+
+html form fieldset .field.error.active .selectbox, body form fieldset .field.error.active .selectbox {
+  background-image:url("/images/form-select-error-active-closed.png");
+}
+
+html form fieldset .field.error.active .selectbox.open, body form fieldset .field.error.active .selectbox.open {
+  background-image:url("/images/form-select-error-active-open.png");
+}
+
+html form fieldset .field.error.active .selectbox-wrapper, html form fieldset .field.error.active .ac_results, body form fieldset .field.error.active .selectbox-wrapper, body form fieldset .field.error.active .ac_results {
+  background-color:#E1B5B6;
+}
+
+html form fieldset .field.error.active .selectbox-wrapper .selected, html form fieldset .field.error.active .ac_results .selected, body form fieldset .field.error.active .selectbox-wrapper .selected, body form fieldset .field.error.active .ac_results .selected {
+  color:#A11C39;
+}
+
+html form fieldset .field.error.active .selectbox-wrapper .current, html form fieldset .field.error.active .ac_results .current, body form fieldset .field.error.active .selectbox-wrapper .current, body form fieldset .field.error.active .ac_results .current {
+  background-color:#D07872;
+  color:#2A0B14;
+}
+
+html form fieldset p.help, body form fieldset p.help {
+  clear:both;
+  margin:0;
+  padding:0 0 20px;
+}
+
+html form p.submit, html form fieldset.submit, body form p.submit, body form fieldset.submit {
+  padding:20px 30px;
+  text-align:right;
+}
+
+html form p.submit .confirmation, html form fieldset.submit .confirmation, body form p.submit .confirmation, body form fieldset.submit .confirmation {
+  text-align:left;
+}
+
+html form p.submit p, html form fieldset.submit p, body form p.submit p, body form fieldset.submit p {
+  float:left;
+  line-height:30px;
+}
+
+html body #content form {
+  padding:0 !important;
+}
+
+html body #content form.panel-body {
+  padding:0 !important;
+}
+
+html, body {
+  background-color:#191A20;
+  background-image:url("/images/pc/header-shadow.png");
+  background-position:0 76px;
+  background-repeat:repeat-x;
+  border:0 none;
+  color:#82859E;
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font-size:100%;
+  font-style:inherit;
+  font-weight:inherit;
+  margin:0;
+  min-width:1000px;
+  padding:0 0 50px;
+  vertical-align:baseline;
+}
+
+html p, html fieldset label, html li, body p, body fieldset label, body li {
+  font-size:14px;
+  line-height:18px;
+}
+
+html p, body p {
+  margin-bottom:4px;
+}
+
+html h2, body h2 {
+  font-size:20px;
+  line-height:20px;
+}
+
+html h3, html h4, body h3, body h4 {
+  font-size:16px;
+  line-height:18px;
+  margin-bottom:4px;
+}
+
+html ul.square li, body ul.square li {
+  list-style-type:square;
+  margin-left:15px;
+}
+
+html a, body a {
+  color:#8D79F2;
+  text-decoration:none;
+}
+
+html a:hover, body a:hover {
+  text-decoration:underline;
+}
+
+html pre, body pre {
+  font-family:"monaco",fixed;
+}
+
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, abbr, acronym, address, code, del, dfn, em, img, dl, dt, dd, ol, ul, li, fieldset, form, input, label, legend, caption, tbody, tfoot, thead, tr {
+  border:0 none;
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font-size:100%;
+  font-style:inherit;
+  font-weight:inherit;
+  margin:0;
+  padding:0;
+  vertical-align:baseline;
+}
+
+blockquote, q {
+  border:0 none;
+  font-family:arial,helvetica,sans-serif;
+  font-size:100%;
+  font-style:inherit;
+  font-weight:inherit;
+  margin:0;
+  padding:0;
+  quotes:"" "";
+  vertical-align:baseline;
+}
+
+blockquote:before, q:before, blockquote:after, q:after {
+  content:"";
+}
+
+th, td, caption {
+  border:0 none;
+  font-family:arial,helvetica,sans-serif;
+  font-size:100%;
+  font-style:inherit;
+  font-weight:normal;
+  margin:0;
+  padding:0;
+  text-align:left;
+  vertical-align:middle;
+}
+
+table {
+  border:0 none;
+  border-collapse:separate;
+  border-spacing:0;
+  font-family:arial,helvetica,sans-serif;
+  font-size:100%;
+  font-style:inherit;
+  font-weight:inherit;
+  margin:0;
+  padding:0;
+  vertical-align:middle;
+}
+
+a img {
+  border:medium none;
+}
+
+li {
+  list-style-type:none;
+}
+
+:focus {
+  outline:0 none;
+}
+
+.clear {
+  clear:both;
+}
+
+#flash {
+  margin-bottom:-30px !important;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:0;
+  padding-top:20px;
+}
+
+#header {
+  background-color:#29264D;
+  border-bottom:3px solid #494573;
+  display:inline-block;
+  min-width:960px;
+  overflow:hidden;
+}
+
+#header {
+  display:block;
+}
+
+#header a {
+  color:#C9C3E6;
+  font-weight:normal;
+  text-decoration:none;
+}
+
+#header a:hover {
+  color:#FFFFFF;
+}
+
+#header #logo {
+  float:left;
+  margin:20px 15px 2px 25px;
+}
+
+#header #logo a {
+  background-image:url("/images/pc/logo.png");
+  background-repeat:no-repeat;
+  display:block;
+  height:69px;
+  overflow:hidden;
+  text-indent:-9999px;
+  width:300px;
+}
+
+#header ul {
+  display:inline-block;
+  float:right;
+  list-style-type:none;
+  margin-top:5px;
+  overflow:hidden;
+  padding:10px;
+}
+
+#header ul {
+  display:block;
+}
+
+#header ul li {
+  float:left;
+  margin-left:10px;
+}
+
+#header ul li:first-child {
+  margin-left:0;
+}
+
+#header ul li {
+  border-left:2px solid #534890;
+  font-size:16px;
+  padding-left:10px;
+}
+
+#header ul li.active a {
+  color:#BFF740;
+}
+
+#header ul li.active:hover a {
+  color:#BFF740;
+}
+
+#header ul li:first-child, #header ul li#account_login {
+  border:medium none;
+  margin-left:0;
+  padding-left:0;
+}
+
+#header ul.account-links {
+  -moz-border-radius:7px 7px 7px 7px;
+  background-color:#231D40;
+  margin-left:10px;
+  margin-right:25px;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+#header .admin_links {
+  margin-right:110px;
+}
+
+#header ul.account-links a {
+  color:#AAAAAA;
+	font-size: 16px;
+}
+
+#header ul.account-links a:hover {
+  color:#FFFFFF;
+}
+
+#header ul.account-links a.active {
+  color:#BFF740;
+}
+
+#header ul.account-links a.active:hover {
+  color:#BFF740;
+}
+
+#header .header_links {
+  margin-top: 25px;
+}
+
+
+ul.submenu {
+  display:inline-block;
+  overflow:hidden;
+  padding-top:5px;
+}
+
+ul.submenu {
+  display:block;
+}
+
+ul.submenu li {
+  display:block;
+  float:left;
+}
+
+ul.submenu li a {
+  -moz-border-radius:14px 14px 14px 14px;
+  background-color:#1F2028;
+  color:#82859E;
+  display:block;
+  margin-right:5px;
+  padding:5px 24px;
+  text-decoration:none;
+}
+
+ul.submenu li a:hover {
+  color:#EEEEEE;
+  text-decoration:none;
+}
+
+#subheader {
+  background-color:#1F2028;
+  border-bottom:1px solid #22232C;
+  display:inline-block;
+  overflow:hidden;
+}
+
+#subheader {
+  display:block;
+}
+
+#subheader .coupon_title {
+  background:url("/images/pc/subheader_triangle.png") no-repeat scroll right top transparent;
+  float:left;
+  margin-right:22px;
+  padding-right:26px;
+}
+
+#subheader .coupon_title h1 {
+  background-color:#191A20;
+  color:#CCCCCC;
+  font-size:20px;
+  font-weight:bold;
+  line-height:50px;
+  padding-left:30px;
+  padding-right:30px;
+}
+
+#subheader .submenu {
+  padding-top:12px;
+}
+
+#subheader .submenu li a {
+  color:#AAAAAA;
+}
+
+#subheader .submenu li a:hover {
+  color:#FFFFFF;
+}
+
+#subheader .submenu li.active a {
+  background-color:#1A1A1A;
+  color:#BFF740;
+}
+
+#content {
+  margin:0 auto;
+  padding-top:40px;
+}
+
+#content .panel {
+  -moz-border-radius:14px 14px 14px 14px;
+  -moz-box-shadow:2px 2px 7px #151515;
+  background-color:#22232C;
+  margin-bottom:20px;
+}
+
+#content .panel .panel-body {
+  padding:0;
+}
+
+#content .panel .help {
+  float:right;
+  padding-right:10px;
+  padding-top:10px;
+}
+
+#content .panel h2 {
+  -moz-border-radius-topleft:14px;
+  -moz-border-radius-topright:14px;
+  background-color:#1F2028;
+  color:#8D79F2;
+  font-family:"Hybrea",sans-serif;
+  font-weight:normal;
+  letter-spacing:1px;
+  margin:0;
+  padding:10px 10px 10px 20px;
+}
+
+#content .panel .intro {
+  padding-left:10px;
+  padding-top:5px;
+}
+
+#content .panel .intro h4 {
+  color:#FFFFFF;
+  font-weight:normal;
+}
+
+#content .panel .intro p a {
+  color:#7F95FF;
+}
+
+#content .panel .part {
+  border-top:4px solid #1F2028;
+  display:inline-block;
+  overflow:hidden;
+  padding-bottom:20px;
+  padding-top:20px;
+}
+
+#content .panel .part {
+  display:block;
+}
+
+#content .panel .part:first-child {
+  border-top-style:none;
+  padding-top:0;
+}
+
+#content .panel .part:last-child {
+  padding-bottom:0;
+}
+
+#content .panel .part h3 {
+  color:#FFFFFF;
+  float:left;
+  font-weight:normal;
+  width:160px;
+}
+
+#content .panel .part p, #content .panel .part ul {
+  margin-left:180px;
+}
+
+#content .panel .part p.help {
+  float:left;
+  padding-top:0;
+}
+
+#content .panel #redeemed {
+  color:#BFF740;
+}
+
+#content .panel .change-password input.submit {
+  margin-left:165px;
+}
+
+#content .panel .app-rename input.submit {
+  margin-left:10px;
+}
+
+#content .panel-small {
+  margin:0 auto;
+  width:400px;
+}
+
+#content .panel-mid {
+  margin:0 auto;
+  width:500px;
+}
+
+#content #notfound h2 {
+  color:#A11C39;
+}
+
+
+body .dialog {
+  background-image:url("/images/pc/dialog-login-background.png");
+  border:1px solid #373553;
+  color:#BFB8E5;
+  width: 500px;
+}
+
+body .dialog h2 {
+  border-bottom:0 none;
+  color:#FFFFFF;
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font-size:20px;
+  padding:20px 30px 10px;
+}
+
+body .dialog p {
+  font-size:14px;
+  padding-bottom:15px;
+  padding-left:30px;
+  padding-right:30px;
+}
+
+body .dialog fieldset {
+  background-color:transparent;
+  border-top:0 none;
+  padding:30px 20px 10px;
+}
+
+body .dialog fieldset .remember_me h3{
+  width:170px;
+  display:inline-block;
+  height:20px;
+  margin:0;
+}
+
+body .dialog fieldset.active {
+  background-color:transparent;
+}
+body .dialog fieldset p {
+  padding-left:0;
+  padding-right:0;
+}
+
+body .dialog fieldset.submit {
+  border:medium none;
+  padding: 0px 20px 10px;
+	padding-bottom: 20px;
+}
+
+body .dialog fieldset.submit p {
+  padding-bottom:0;
+}
+
+body .dialog input.text {
+  width:360px;
+}
+
+body .dialog, body #message {
+-moz-border-radius:10px 10px 10px 10px;
+-moz-box-shadow:0 0 10px #040307;
+background-repeat:repeat-x;
+margin:0 auto;
+text-align:left;
+}
+
+html body #content #message {
+  background-image:url("/images/pc/dialog-message-background.png");
+  background-position:center top;
+  border:1px solid #28283F;
+  color:#585993;
+  display:block;
+  font-size:14px;
+  margin:auto;
+  margin-top:20px;
+  padding:20px 0 20px;
+  text-align:center;
+  text-decoration:none;
+}
+
+html body #message span {
+  color:#8D79F2;
+}
+html body #message:hover span {
+  text-decoration:underline;
+}
+
+html body .separator {
+  padding-left:5px;
+  padding-right:5px;
+}
+
+html body .com_icon {
+  background-image:url("/images/common/com_icon.gif");
+  float: right;
+	margin-right: 20px;
+  background-repeat:no-repeat;
+  display:block;
+	width: 28px;
+	height:15px;
+}
+
+html body #content select {
+  -moz-border-radius:14px 14px 14px 14px;
+  -moz-box-shadow:2px 2px 7px #151515;
+  background-color:white;
+	margin-left: 15px;
+}
