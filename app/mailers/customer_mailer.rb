@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 class CustomerMailer < ActionMailer::Base
+  default :from => "notifications@example.com"
 
   def deliver_activation_instructions(customer)
   	@customer = customer

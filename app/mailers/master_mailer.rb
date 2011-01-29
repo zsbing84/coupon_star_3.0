@@ -1,7 +1,8 @@
 # -*- encoding : utf-8 -*-
 class MasterMailer < ActionMailer::Base
+  default :from => "notifications@example.com"
 
-  def activation_instructions(master)
+  def deliver_activation_instructions(master)
   	@master = master
   	@url = activate_url(master.perishable_token)
   	mail(:to => master.email,  :subject => "【グルーポン(COUPONSTAR)】仮登録受付メール")
