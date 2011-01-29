@@ -27,7 +27,7 @@ class MastersController < ApplicationController
 			@master = Master.new(params[:master])
 	    if @master.save
 	    	@master.reset_perishable_token!
-	    	MasterMailer.delay.deliver_activation_instructions(@master)
+	    	MasterMailer.activation_instructions(@master).deliver
 				flash[:notice] = "ご登録頂きましたメールアドレスに、「仮登録受付メール」をお送りいたしました。「仮登録受付メール」内にあるリンクをクリックし、会員登録を完了してください。"
 	   		redirect_to master_signin_path
 			else

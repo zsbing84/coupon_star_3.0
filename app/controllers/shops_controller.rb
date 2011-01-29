@@ -37,7 +37,7 @@ class ShopsController < ApplicationController
   end
 
  def analysis
-    if params[:commit] == "表示"
+    if params[:commit] == "フォロワー数を表示"
       duration_id = params[:duration_id].to_i
     else
       duration_id = 1

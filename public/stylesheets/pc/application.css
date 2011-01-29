@@ -896,9 +896,3 @@ html body .com_icon {
 	height:15px;
 }
 
-html body #content select {
-  -moz-border-radius:14px 14px 14px 14px;
-  -moz-box-shadow:2px 2px 7px #151515;
-  background-color:white;
-	margin-left: 15px;
-}

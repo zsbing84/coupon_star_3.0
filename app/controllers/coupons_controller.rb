@@ -40,13 +40,13 @@ class CouponsController < ApplicationController
     record = nil
     general_id = nil
 
-    if params[:commit] == "表示中レコード削除"
+    if params[:commit] == "表示中レコードを削除"
       record = CouponAnalysisRecord.find(params[:record_id])
       coupon = record.coupon
       record.destroy
       redirect_to analysis_coupon_path(coupon)
       return
-    elsif params[:commit] == "レコード表示"
+    elsif params[:commit] == "レコードを表示"
       record = CouponAnalysisRecord.find(params[:record_id])
       @coupon = record.coupon
       general_id = params[:general_id].to_i

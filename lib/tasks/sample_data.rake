@@ -104,7 +104,7 @@ def make_genders
 end
 
 def make_coupon_chart_display_generals
-    CouponChartDisplayGeneral.create!(:name => "観覧数")
+    CouponChartDisplayGeneral.create!(:name => "閲覧数")
     CouponChartDisplayGeneral.create!(:name => "利用数")
 end
 
