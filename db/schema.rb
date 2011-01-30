@@ -12,18 +12,6 @@
 
 ActiveRecord::Schema.define(:version => 20110117024421) do
 
-  create_table "click_actions", :force => true do |t|
-    t.integer  "coupon_id",    :null => false
-    t.integer  "customer_id",  :null => false
-    t.datetime "clicked_time", :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "click_actions", ["clicked_time"], :name => "index_click_actions_on_clicked_time"
-  add_index "click_actions", ["coupon_id"], :name => "index_click_actions_on_coupon_id"
-  add_index "click_actions", ["customer_id"], :name => "index_click_actions_on_customer_id"
-
   create_table "coupon_analysis_records", :force => true do |t|
     t.integer  "coupon_id",                        :null => false
     t.string   "name",                             :null => false
@@ -102,7 +90,7 @@ ActiveRecord::Schema.define(:version => 20110117024421) do
   add_index "coupons", ["shop_id"], :name => "index_coupons_on_shop_id"
 
   create_table "customers", :force => true do |t|
-    t.string   "email",                                :null => false
+    t.string   "email"
     t.boolean  "active",            :default => false, :null => false
     t.boolean  "receive_notice",    :default => true,  :null => false
     t.date     "birthday"
@@ -154,7 +142,7 @@ ActiveRecord::Schema.define(:version => 20110117024421) do
   end
 
   create_table "masters", :force => true do |t|
-    t.string   "email",                                :null => false
+    t.string   "email"
     t.boolean  "admin",             :default => false, :null => false
     t.boolean  "active",            :default => false, :null => false
     t.string   "crypted_password"
@@ -233,17 +221,5 @@ ActiveRecord::Schema.define(:version => 20110117024421) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
   end
-
-  create_table "view_actions", :force => true do |t|
-    t.integer  "coupon_id",   :null => false
-    t.integer  "customer_id", :null => false
-    t.datetime "viewed_time", :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "view_actions", ["coupon_id"], :name => "index_view_actions_on_coupon_id"
-  add_index "view_actions", ["customer_id"], :name => "index_view_actions_on_customer_id"
-  add_index "view_actions", ["viewed_time"], :name => "index_view_actions_on_viewed_time"
 
 end

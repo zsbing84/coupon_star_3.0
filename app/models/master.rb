@@ -8,6 +8,10 @@ class Master < ActiveRecord::Base
 
 	has_many :shops, :dependent => :destroy
 
+  searchable do
+    text :email, :default_boost => 2
+  end
+
 	def self.activate!(master)
     master.update_attribute(:active, true)
   end
@@ -48,6 +52,11 @@ class Master < ActiveRecord::Base
 		else
 			return false
 		end
+  end
+
+  def new_random_password
+    password = Digest::SHA1.hexdigest("--#{Time.now.to_s}--#{email}--")[0,6]
+    return password
   end
 
 end

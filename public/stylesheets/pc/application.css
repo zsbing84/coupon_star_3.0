@@ -796,8 +796,6 @@ ul.submenu li a:hover {
 
 
 body .dialog {
-  background-image:url("/images/pc/dialog-login-background.png");
-  border:1px solid #373553;
   color:#BFB8E5;
   width: 500px;
 }
@@ -853,11 +851,18 @@ body .dialog input.text {
 }
 
 body .dialog, body #message {
--moz-border-radius:10px 10px 10px 10px;
--moz-box-shadow:0 0 10px #040307;
-background-repeat:repeat-x;
-margin:0 auto;
-text-align:left;
+  -moz-border-radius:10px 10px 10px 10px;
+  -moz-box-shadow:0 0 10px #040307;
+  background-repeat:repeat-x;
+  margin:0 auto;
+  text-align:left;
+}
+
+body .dialog .panel_body {
+  -moz-border-radius:10px 10px 10px 10px;
+  -moz-box-shadow:0 0 10px #040307;
+  border: 1px solid #28283F;
+  background-image:url("/images/pc/dialog-login-background.png");
 }
 
 html body #content #message {

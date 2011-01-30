@@ -3,13 +3,8 @@ class SearchesController < ApplicationController
 
   def coupons_search
     if params[:keywords] != ""
-      words = params[:keywords].split(/\s+/)
-      prefix, full_words = words.pop, words.join(' ')
       @coupons = Sunspot.search(Coupon) do
-        keywords(full_words, :fields => :title)
-        text_fields do
-          with(:title).starting_with(prefix)
-        end
+        keywords(params[:keywords])
       end
       @coupons = @coupons.results
     else
@@ -43,13 +38,8 @@ class SearchesController < ApplicationController
 
   def shops_search
     if params[:keywords] != ""
-      words = params[:keywords].split(/\s+/)
-      prefix, full_words = words.pop, words.join(' ')
       @shops = Sunspot.search(Shop) do
-        keywords(full_words, :fields => :name)
-        text_fields do
-          with(:name).starting_with(prefix)
-        end
+        keywords(params[:keywords])
       end
       @shops = @shops.results
     else

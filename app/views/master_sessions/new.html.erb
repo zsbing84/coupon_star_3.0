@@ -1,4 +1,4 @@
-<%= render 'shared/error_messages', :object => @master_session %>
+
 <div id="sign_in">
   <% flash.each do |key, value| %>
     <div class="notice login">
@@ -6,6 +6,7 @@
     </div>
   <% end %>
   <div class="dialog">
+    <%= render 'shared/error_messages', :object => @master_session %>
     <div class="panel_body">
       <%= form_for @master_session do |f| %>
         <fieldset>

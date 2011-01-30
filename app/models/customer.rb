@@ -13,10 +13,13 @@ class Customer < ActiveRecord::Base
 	has_many :coupon_customer_rels, :foreign_key => "customer_id",
                            				:dependent => :destroy
 
-  validates_presence_of :email
   validates_presence_of :password
   validates_presence_of :gender_id
 	validates_date :birthday
+
+  searchable do
+    text :email, :default_boost => 2
+  end
 
 	def self.activate!(customer)
     customer.update_attribute(:active, true)
@@ -198,6 +201,11 @@ class Customer < ActiveRecord::Base
 
 	def convert_string_to_array(string)
 		string.split(',').map(&:to_i)
+  end
+
+  def new_random_password
+    self.password= Digest::SHA1.hexdigest("--#{Time.now.to_s}--#{login}--")[0,6]
+    self.password_confirmation = self.password
   end
 
 end

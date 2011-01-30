@@ -13,10 +13,10 @@ class MasterMailer < ActionMailer::Base
   	mail(:to => master.email,  :subject => "【グルーポン(COUPONSTAR)】ご登録ありがとうございました。")
   end
 
-  def deliver_password_reset_instructions(master)
+  def deliver_password_reset_instructions(master, password)
   	@master = master
-		@edit_master_password_reset_url = edit_master_password_reset_url(master.perishable_token)
-  	mail(:to => master.email,  :subject => "【グルーポン(COUPONSTAR)】パスワード再発行を受付しました。")
+    @password = password
+  	mail(:to => master.email,  :subject => "【グルーポン(COUPONSTAR)】パスワードを再発行しました。")
   end
 
 

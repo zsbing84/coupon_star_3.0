@@ -1,11 +1,27 @@
-<h1>Forgot Password</h1>
 
-Fill out the form below and instructions to reset your password will be emailed to you:<br />
-<br />
+<div class="dialog">
+  <% flash.each do |key, value| %>
+    <div class="notice login">
+      <h3><%= value %></h3>
+    </div>
+  <% end %>
+  <div class="panel_body">
+    <%= form_tag master_password_resets_path do |f| %>
+      <fieldset>
+        <div class="field">
+          <h6>
+              パスワードを忘れてしまった場合、パスワードの再発行が行えます。メールアドレスをご入力後、再発行をクリックしてください。
+          </h6>
+        </div>
+        <div class="field">
+          <h3>登録メールアドレス：</h3>
+          <%= text_field_tag "email", '', :size => '50' %><br />
+        </div>
+      </fieldset>
+      <fieldset class="submit">
+        <%= submit_tag "パスワードを再発行する", :class => "link_button"%>
+      </fieldset>
+    <% end %>
+  </div>
+</div>
 
-<% form_tag master_password_resets_path do %>
-  <label>Email:</label><br />
-  <%= text_field_tag "email" %><br />
-  <br />
-  <%= submit_tag "Reset master password" %>
-<% end %>

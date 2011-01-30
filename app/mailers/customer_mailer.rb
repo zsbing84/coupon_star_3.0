@@ -16,13 +16,13 @@ class CustomerMailer < ActionMailer::Base
   def deliver_new_coupon_instructions(customer, coupon)
   	@customer = customer
   	@coupon = coupon
-  	mail(:to => customer.email,  :subject => "【グルーポン(COUPONSTAR)】#{@coupon.shop.name}からお得なクーポンをお届けします。")
+  	mail(:to => customer.email,  :subject => "【グルーポン(COUPONSTAR)】新しいクーポンのお知らせ。")
   end
 
   def deliver_password_reset_instructions(customer)
   	@customer = customer
-		@edit_customer_password_reset_url = edit_customer_password_reset_url(customer.perishable_token)
-  	mail(:to => customer.email,  :subject => "【グルーポン(COUPONSTAR)】パスワード再発行を受付しました。")
+		@url = edit_customer_password_reset_url(customer.perishable_token)
+  	mail(:to => customer.email,  :subject => "【グルーポン(COUPONSTAR)】パスワードを再発行しました。")
   end
 
 private
