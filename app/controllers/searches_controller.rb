@@ -13,24 +13,27 @@ class SearchesController < ApplicationController
 
 		results = []
 		if request.mobile?
-			customer = Customer.find(params[:customer_id])
 			@coupons.each do |coupon|
-				if customer.has_coupon?(coupon)
+				if current_customer.has_coupon?(coupon)
 					results << coupon
 				end
 			end
 		elsif admin_master?
 			results = @coupons
 		else
-			master = Master.find(params[:master_id])
 			@coupons.each do |coupon|
-				if master.has_coupon?(coupon)
+				if current_master.has_coupon?(coupon)
 					results << coupon
 				end
 			end
 		end
 
 		@coupons = results
+    @count = @coupons.count
+    if request.mobile?
+      @coupons = @coupons.paginate :page => params[:page], :order => 'updated_at DESC', :per_page => 10
+    end
+
     @header_coupons = true;
     @coupons_search = true;
     render "/coupons/index"
@@ -48,24 +51,27 @@ class SearchesController < ApplicationController
 
 		results = []
 		if request.mobile?
-			customer = Customer.find(params[:customer_id])
 			@shops.each do |shop|
-				if customer.following?(shop)
+				if current_customer.following?(shop)
 					results << shop
 				end
 			end
 		elsif admin_master?
 			results = @shops
 		else
-			master = Master.find(params[:master_id])
 			@shops.each do |shop|
-				if master.has_shop?(shop)
+				if current_master.has_shop?(shop)
 					results << shop
 				end
 			end
 		end
 
 		@shops = results
+    @count = @shops.count
+    if request.mobile?
+      @shops = @shops.paginate :page => params[:page], :order => 'updated_at DESC', :per_page => 10
+    end
+
     @header_shops = true;
     @shops_search = true;
     render "/shops/index"

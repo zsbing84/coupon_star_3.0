@@ -1,7 +1,7 @@
 
 <center>
 	<div class="display_items_count_info"">
-	  ショップ数: <%= @shops.count %>
+	  ショップ数: <%= @count %>
 	</div>
 	 <br />
 </center>
@@ -25,6 +25,7 @@
 	<% if shop != @shops.last %>
 		<div id="dotline"></div>
 	<% end %>
-
 <% end %>
+<br />
+<%= will_paginate @shops %>
 

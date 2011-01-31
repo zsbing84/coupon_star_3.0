@@ -56,7 +56,7 @@ def make_masters
                  :password => "admin",
                  :password_confirmation => "admin")
 
-  3.times do |n|
+  20.times do |n|
     email = "master-#{n+1}@railstutorial.org"
     password  = "password"
     Master.create!(:email => email,
@@ -67,7 +67,7 @@ def make_masters
 end
 
 def make_customers
-  3.times do |n|
+  20.times do |n|
     login = Faker::Name.name
     email = "customer-#{n+1}@railstutorial.org"
     password = "password"
@@ -116,7 +116,7 @@ end
 
 def make_shops
   index = 0
-	Master.limit(3).offset(1).each do |master|
+	Master.limit(20).offset(1).each do |master|
     index = index + 1
     name = "中華料理五十番-#{index}"
     description = "本格の上海料理"
@@ -169,8 +169,8 @@ def make_coupons
 	index = 0;
   Shop.all.each do |shop|
 		index = index + 1
-    1.times do |n|
-    	title = "五十番餃子一皿無料-#{index}"
+    20.times do |n|
+    	title = "五十番餃子一皿無料-#{index}-#{n}"
     	content = "五十番餃子一皿を無料サービス致します。"
     	start_at = Date.today + 1.day
     	end_at = Date.today + 7.days

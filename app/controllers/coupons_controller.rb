@@ -14,6 +14,8 @@ class CouponsController < ApplicationController
       @coupons = current_master.get_coupons
     elsif signed_in_customer? && request.mobile?
       @coupons = current_customer.get_coupons
+      @count = @coupons.count
+      @coupons = @coupons.paginate :page => params[:page], :order => 'updated_at DESC', :per_page => 10
     end
 
     @header_coupons = true

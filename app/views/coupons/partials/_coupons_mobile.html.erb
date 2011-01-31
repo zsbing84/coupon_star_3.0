@@ -1,7 +1,7 @@
 
 <center>
 	<div class="display_items_count_info"">
-	  クーポン数： <%= @coupons.count %>
+	  クーポン数： <%= @count %>
 	</div>
 	 <br />
 </center>
@@ -32,6 +32,7 @@
 	<% if coupon != @coupons.last %>
 		<div id="dotline"></div>
 	<% end %>
-
 <% end %>
+<br />
+<%= will_paginate @coupons %>
 

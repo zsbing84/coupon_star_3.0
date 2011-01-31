@@ -22,24 +22,10 @@ class Shop < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
   accepts_nested_attributes_for :open_hours, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
 
-	def get_coupons
-		@coupons = []
-    if signed_in_customer?
-      current_customer.get_coupons.each do |coupon|
-        if coupon.shop_id == @shop.id
-          @coupons << coupon
-        end
-      end
-    elsif signed_in_master?
-      current_master.get_coupons.each do |coupon|
-        if coupon.shop_id == @shop.id
-          @coupons << coupon
-        end
-      end
-    end
-
-		return coupons
-	end
+  searchable do
+    text :name, :default_boost => 2
+    text :description
+  end
 
   def get_analysis_start_at(duration_id)
     start_at = self.young_start_at

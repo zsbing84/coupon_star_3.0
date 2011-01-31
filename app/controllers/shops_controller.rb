@@ -16,6 +16,8 @@ class ShopsController < ApplicationController
       @shops = current_master.get_shops
     elsif signed_in_customer? && request.mobile?
       @shops = current_customer.shops
+      @count = @shops.count
+      @shops = @shops.paginate :page => params[:page], :order => 'updated_at DESC', :per_page => 10
     end
 
     @header_shops = true
@@ -136,7 +138,20 @@ class ShopsController < ApplicationController
     @shop = Shop.find(params[:id])
     @header_coupons = true
     @shop_display_coupons = true
-    @coupons = @shop.get_coupons
+		@coupons = []
+    if signed_in_customer?
+      current_customer.get_coupons.each do |coupon|
+        if coupon.shop_id == @shop.id
+          @coupons << coupon
+        end
+      end
+    elsif signed_in_master?
+      current_master.get_coupons.each do |coupon|
+        if coupon.shop_id == @shop.id
+          @coupons << coupon
+        end
+      end
+    end
 
     render '/coupons/index'
   end
