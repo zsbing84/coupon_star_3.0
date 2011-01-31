@@ -1,7 +1,9 @@
 
-<form action="/shop_analysis" method='get' id="chart_form">
+<form action="/shop_analysis" method='get'>
 	<center>
-		<%= select_tag 'duration_id', options_from_collection_for_select(ShopChartDisplayGeneral.find(:all), :id, :name, @duration.id) %>
+		<div class="selectReplace">
+			<%= select_tag 'duration_id', options_from_collection_for_select(ShopChartDisplayGeneral.find(:all), :id, :name, @duration.id) %>
+		</div>
 	  <span class="separator"></span>
 	  <%= hidden_field_tag 'id', @shop.id %>
 		<%= submit_tag "フォロワー数を表示", :class => "link_button"%>

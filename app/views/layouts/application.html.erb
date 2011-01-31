@@ -13,7 +13,7 @@
 	    //]]>
       </script>
 		</head>
-		<body onload="loadMap()" onunload="GUnload()" >
+		<body>
 	    <div id="container" >
 				<%= render 'layouts/header' %>
 				<%= yield %>
@@ -31,16 +31,14 @@
 			<%= render 'layouts/javascripts' %>
 	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 	    <script type="text/javascript">
-	    //<![CDATA[
-	    var map = null;
-	    var geocoder = null;
-			var address = null;
-      var age_dist_chart = null;
-      var gender_dist_chart = null;
-	    //]]>
-	    </script>
+		    // <![CDATA[
+		    window.onload = function() {
+		      (document.all && !window.print) ? null : setForm();
+		    }
+		    // ]]>
+		  </script>
 		</head>
-	  <body onload="loadMap()" onunload="GUnload()" >
+	  <body>
 	    <div class="container" >
 	     	<%= render 'layouts/header' %>
 	     	<% if @sub_header == true %>

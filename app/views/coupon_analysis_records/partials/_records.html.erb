@@ -1,0 +1,26 @@
+<% for record in @records %>
+  <div class="record part">
+    <%= link_to record, :class => "record_image" do %>
+	    <div class="sample_record_image"></div>
+    <% end %>
+    <div class="record_name">
+      <h4>
+        <%= link_to record.name, record %>
+      </h4>
+    </div>
+    <ul class="submenu">
+      <li>
+				<% if !record.is_current?%>
+					<%= link_to "削除", record, :method => :delete,
+						:confirm => "#{record.name}を永久に削除してよろしいでしょうか?",
+		                             	:title => "Delete #{record.name}",
+		                             	:class => "action_botton"%>
+				<% end %>
+      </li>
+      <li>
+        <%= link_to "詳細", record, :class => "action_botton" %>
+      </li>
+    </ul>
+	</div>
+<% end %>
+

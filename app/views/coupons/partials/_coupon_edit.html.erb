@@ -19,11 +19,11 @@
 				</div>
 				<div class="part">
 				  <h3><%= f.label :shop_id %><div class="com_icon"></div></h3>
-				  <div class="field">
-				    <%= f.collection_select :shop_id, current_master.get_shops,
+				  <div class="field selectReplace">
+							<%= f.collection_select :shop_id, current_master.get_shops,
 				                    :id, :name, {}, :disabled => is_disabled?(@coupon),%>
-						<span class="separator"></span>
 				    <% if @coupon.id.nil? && current_master.shops.count == 0 && !current_master.admin?%>
+							<span class="separator"></span>
 				      <%=link_to "ショップ新規作成へ", new_shop_path %>
 				    <% end %>
 				  </div>

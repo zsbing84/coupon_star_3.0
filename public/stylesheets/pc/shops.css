@@ -150,7 +150,6 @@ html body #content .shops .panel .panel-body #search_bar fieldset {
 
 html body #content .shops .panel .panel-body #search_bar fieldset:active .text {
   -moz-box-shadow:2px 2px 6px #232323;
-  background-color:#C2E3F3;
 }
 
 html body #content .shops .panel .panel-body #search_bar fieldset h2 {

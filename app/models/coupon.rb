@@ -26,11 +26,6 @@ class Coupon < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
   accepts_nested_attributes_for :fine_prints, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
 
-  searchable do
-    text :title, :default_boost => 2
-    text :content
-  end
-
 	def self.activate!(coupon, date)
     coupon.shop.customers.each do |customer|
       if is_age_sufficient(coupon, customer) && is_gender_sufficient(coupon, customer)
@@ -68,9 +63,9 @@ class Coupon < ActiveRecord::Base
 
 	def self.inactivate(coupon)
 	  if coupon.start_at > Date.today
-	    name = "#{coupon.start_at} ~ #{coupon.start_at}"
+	    name = "#{coupon.start_at} ～ #{coupon.start_at}"
     else
-	    name = "#{coupon.start_at} ~ #{Date.today}"
+	    name = "#{coupon.start_at} ～ #{Date.today}"
     end
 
     record = CouponAnalysisRecord.where("coupon_id = ? AND is_current = ?", coupon.id, true).first

@@ -36,7 +36,9 @@
 				<div class="part">
 				  <h3><%= f.label :gender_id %><div class="com_icon"></div></h3>
 				  <div class="field">
-				    <%= f.collection_select :gender_id, Gender.find(:all), :id, :name, {}, %>
+						<div class="selectReplace">
+							<%= f.collection_select :gender_id, Gender.find(:all), :id, :name, {}, %>
+						</div>
 				  </div>
 				</div>
 				<% if @customer.id.nil? %>

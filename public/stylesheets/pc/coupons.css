@@ -32,7 +32,7 @@ html body #content #coupon_analysis .chart_form .target {
 }
 
 html body #content #coupon_analysis .chart_form .destroy {
-	margin-left: 120px;
+	margin-left: 280px;
 	display:inline;
 }
 
@@ -74,10 +74,6 @@ html body #content .coupon_detail .panel .panel-body .part .field #save{
   margin-left:20px;
   width:80px;
   padding:0;
-}
-
-html body #content .coupon_detail .panel .panel-body .part .field ul{
-  margin-left:115px;
 }
 
 html body #content .coupon_detail .panel .panel-body .part .field a{
@@ -187,7 +183,7 @@ html body #content .coupons .panel .panel-body #search_bar fieldset {
   padding-bottom:0;
 }
 
-html body #content .coupons .panel .panel-body #search_bar fieldset:active .text {
+html body #content .coupons .panel .panel-body #search_bar fieldset .field.active .text {
   -moz-box-shadow:2px 2px 6px #232323;
   background-color:#C2E3F3;
 }
@@ -374,6 +370,175 @@ html body #content .coupons .panel .panel-body #searchnotfound h3 {
   font-size:14px;
 }
 html body #content .coupons .panel .panel-body #searchnotfound h3 a:hover span {
+  text-decoration:none !important;
+}
+
+html body #content .records {
+  margin:auto;
+  padding-top:40px;
+  width:620px;
+}
+
+html body #content .records .panel  {
+  -moz-border-radius:14px 14px 14px 14px;
+  -moz-box-shadow:2px 2px 7px #151515;
+  background-color:#22232C;
+  margin-bottom:20px;
+}
+
+html body #content .records .panel .panel-body #search_bar fieldset {
+  -moz-border-radius-topleft:14px;
+  -moz-border-radius-topright:14px;
+  padding-bottom:0;
+}
+
+html body #content .records .panel .panel-body #search_bar fieldset:active .text {
+  -moz-box-shadow:2px 2px 6px #232323;
+}
+
+html body #content .records .panel .panel-body #search_bar fieldset h2 {
+  background-color:transparent;
+  float:left;
+  margin:0;
+  padding:0;
+  text-align:left;
+  width:240px;
+}
+
+html body #content .records .panel .panel-body #search_bar fieldset .field {
+  float:right;
+  text-align:right;
+  width:440px;
+}
+
+html body #content .records .panel .panel-body #search_bar fieldset .field label {
+  float:left;
+  font-size:12px;
+  line-height:26px;
+  padding-right:5px;
+  text-align:right;
+}
+
+html body #content .records .panel .panel-body #search_bar fieldset .field .text {
+  float:right;
+}
+
+html body #content .records .panel .panel-body .pagination{
+  display:block;
+  padding:0px 0px 20px 40px;
+  height:20px;
+}
+
+html body #content .records .panel .panel-body .record {
+  border-top:4px solid #1F2028;
+  display:block;
+  overflow:hidden;
+  padding-bottom:10px;
+  padding-top:10px;
+}
+html body #content .records .panel .panel-body .part {
+  padding:10px 20px 10px 20px;
+}
+
+html body #content .records .panel .panel-body .part .item_image{
+	width: 80px;
+	height: 70px;
+}
+
+html body #content .records .panel .panel-body .part .sample_record_image{
+  background-image:url("/images/pc/sample_shop.jpg");
+	width: 80px;
+	height: 70px;
+}
+
+html body #content .records .panel .panel-body .record:hover{
+  background-color: #1F2028;
+}
+
+html body #content .records .panel .panel-body .record:hover .record_name a {
+  color:#ffffff;
+}
+
+html body #content .records .panel .panel-body .record.last:hover {
+-moz-border-radius-bottomleft:14px;
+-moz-border-radius-bottomright:14px;
+}
+
+html body #content .records .panel .panel-body .record {
+  display:block;
+  overflow:hidden;
+  height:70px;
+}
+
+html body #content .records .panel .panel-body .record .record_image {
+  cursor:pointer;
+  display:block;
+  float:left;
+  height:70px;
+  position:relative;
+  text-decoration:none;
+  width:95px;
+}
+
+html body #content .records .panel .panel-body .separator {
+  padding-left:5px;
+  padding-right:5px;
+}
+
+html body #content .records .panel .panel-body .record .record_name {
+  padding-top:10px;
+  float:left;
+}
+
+html body #content .records .panel .panel-body .record .record_name h4 {
+  float:none;
+  font-size:16px;
+  font-weight:bold;
+  padding-top:10px;
+  line-height:20px;
+  margin:0;
+  width:240px;
+}
+
+html body #content .records .panel .panel-body .record .record_name h4 a {
+  color:#C6C9E2;
+  text-decoration:none;
+}
+
+html body #content .records .panel .panel-body .record ul.submenu {
+  margin:0 40px 0 0;
+  float:right;
+  display:block;
+  width:180px;
+  padding-top:15px;
+}
+
+html body #content .records .panel .panel-body .record ul.submenu li {
+  display:block;
+  float:right;
+	margint-left: 40px;
+}
+
+html body #content .records .panel .panel-body .record ul.submenu li a {
+  -moz-border-radius:14px 14px 14px 14px;
+  background-color:#1F2028;
+  color:#82859E;
+  display:block;
+  padding:5px 24px;
+  text-decoration:none;
+}
+
+html body #content .records .panel .panel-body #searchnotfound {
+  border-top:4px solid #1F2028;
+  padding:20px;
+  text-align:center;
+}
+
+html body #content .records .panel .panel-body #searchnotfound h3 {
+  font-size:14px;
+}
+
+html body #content .records .panel .panel-body #searchnotfound h3 a:hover span {
   text-decoration:none !important;
 }
 

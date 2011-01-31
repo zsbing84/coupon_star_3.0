@@ -1,0 +1,19 @@
+
+<form action="/coupon_analysis" method='get' >
+	<span class="separator"></span><span class="separator"></span>
+	<div class="selectReplace">
+		<%= select_tag 'general_id', options_from_collection_for_select(CouponChartDisplayGeneral.find(:all), :id, :name, @general.id) %>
+	</div>
+	<span class="separator"></span>  <span class="separator"></span>
+  <%= hidden_field_tag 'id', @record.id %>
+	<%= submit_tag "表示する", :class => "link_button"%>
+	<% if !@record.is_current? %>
+		<div class="destroy">
+			<%= link_to "削除する", @record, :method => :delete,
+						:confirm => "#{@record.name}を永久に削除してよろしいでしょうか?",
+		                             	:title => "Delete #{@record.name}",
+		                             	:class => "link_button"%>
+		</div>
+	<% end %>
+</form>
+

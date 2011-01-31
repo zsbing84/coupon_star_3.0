@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(:version => 20110117024421) do
   add_index "coupons", ["shop_id"], :name => "index_coupons_on_shop_id"
 
   create_table "customers", :force => true do |t|
-    t.string   "email"
+    t.string   "email",                                :null => false
     t.boolean  "active",            :default => false, :null => false
     t.boolean  "receive_notice",    :default => true,  :null => false
     t.date     "birthday"
@@ -142,7 +142,7 @@ ActiveRecord::Schema.define(:version => 20110117024421) do
   end
 
   create_table "masters", :force => true do |t|
-    t.string   "email"
+    t.string   "email",                                :null => false
     t.boolean  "admin",             :default => false, :null => false
     t.boolean  "active",            :default => false, :null => false
     t.string   "crypted_password"

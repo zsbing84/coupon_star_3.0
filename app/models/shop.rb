@@ -22,11 +22,6 @@ class Shop < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
   accepts_nested_attributes_for :open_hours, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
 
-  searchable do
-    text :name, :default_boost => 2
-    text :description
-  end
-
 	def get_coupons
 		@coupons = []
     if signed_in_customer?

@@ -213,7 +213,7 @@ html form fieldset:last-child, body form fieldset:last-child {
 }
 
 html form fieldset.active, body form fieldset.active {
-  background-color:#1F2028;
+#  background-color:#1F2028;
 }
 
 html form fieldset p.overview, body form fieldset p.overview {
@@ -289,56 +289,6 @@ html form fieldset .field.active .selectbox.open, body form fieldset .field.acti
   -moz-border-radius-bottomleft:0;
   -moz-border-radius-bottomright:0;
   background-image:url("/images/form-select-active-open.png");
-}
-
-html form fieldset .field.error, body form fieldset .field.error {
-  color:#D07872;
-}
-
-html form fieldset .field.error select, html form fieldset .field.error .text, body form fieldset .field.error select, body form fieldset .field.error .text {
-  background-color:#D07872;
-}
-
-html form fieldset .field.error .selectbox, body form fieldset .field.error .selectbox {
-  background-image:url("/images/form-select-error-closed.png");
-}
-
-html form fieldset .field.error .selectbox.open, body form fieldset .field.error .selectbox.open {
-  background-image:url("/images/form-select-error-open.png");
-}
-html form fieldset .field.error .selectbox-wrapper, body form fieldset .field.error .selectbox-wrapper {
-  background-color:#D07872;
-}
-
-html form fieldset .field.error.active select, html form fieldset .field.error.active .text, body form fieldset .field.error.active select, body form fieldset .field.error.active .text {
-  background-color:#E1B5B6;
-}
-
-html form fieldset .field.error.active .selectbox, body form fieldset .field.error.active .selectbox {
-  background-image:url("/images/form-select-error-active-closed.png");
-}
-
-html form fieldset .field.error.active .selectbox.open, body form fieldset .field.error.active .selectbox.open {
-  background-image:url("/images/form-select-error-active-open.png");
-}
-
-html form fieldset .field.error.active .selectbox-wrapper, html form fieldset .field.error.active .ac_results, body form fieldset .field.error.active .selectbox-wrapper, body form fieldset .field.error.active .ac_results {
-  background-color:#E1B5B6;
-}
-
-html form fieldset .field.error.active .selectbox-wrapper .selected, html form fieldset .field.error.active .ac_results .selected, body form fieldset .field.error.active .selectbox-wrapper .selected, body form fieldset .field.error.active .ac_results .selected {
-  color:#A11C39;
-}
-
-html form fieldset .field.error.active .selectbox-wrapper .current, html form fieldset .field.error.active .ac_results .current, body form fieldset .field.error.active .selectbox-wrapper .current, body form fieldset .field.error.active .ac_results .current {
-  background-color:#D07872;
-  color:#2A0B14;
-}
-
-html form fieldset p.help, body form fieldset p.help {
-  clear:both;
-  margin:0;
-  padding:0 0 20px;
 }
 
 html form p.submit, html form fieldset.submit, body form p.submit, body form fieldset.submit {
@@ -759,10 +709,6 @@ ul.submenu li a:hover {
   width:160px;
 }
 
-#content .panel .part p, #content .panel .part ul {
-  margin-left:180px;
-}
-
 #content .panel .part p.help {
   float:left;
   padding-top:0;
@@ -900,4 +846,69 @@ html body .com_icon {
 	width: 28px;
 	height:15px;
 }
+
+html body .selectReplace {
+	display: inline-block;
+  margin: 0 0 10px;
+  border: 1px solid #666;
+  color: #999;
+}
+
+html body .selectReplace select {
+  display: inline-block;
+  width: 200px;
+}
+
+html body .selectReplace select.replaced {
+  display: none;
+}
+
+html body .selectReplace ul.selectReplacement {
+  background: url("/images/pc/select_top.jpg") top left no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 1.65em;
+  width: 200px;
+}
+
+html body .selectReplace ul.selectReplacement li {
+  background: #cf5a5a;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 13px;
+  line-height: 1.7em;
+  list-style: none;
+  margin: 0;
+  padding: 1px 12px;
+  width: 176;
+}
+
+html body .selectReplace ul.selectOpen li {
+  display: block;
+}
+
+html body .selectReplace ul.selectReplacement li.selected {
+  background: url("/images/pc/select_bottom.gif") bottom left no-repeat;
+  color: #fff;
+  display: block;
+}
+
+html body .selectReplace .selectReplace ul.selectOpen li.selected {
+  background: #C9C3E6;
+  display: block;
+}
+
+html body .selectReplace ul.selectOpen li:hover,
+html body .selectReplace ul.selectOpen li.hover,
+html body .selectReplace ul.selectOpen li.selected:hover {
+  background: #C9C3E6;
+  color: #fff;
+}
+
+html body .selectReplace ul{
+  margin-left:0px;
+}
+
+
 

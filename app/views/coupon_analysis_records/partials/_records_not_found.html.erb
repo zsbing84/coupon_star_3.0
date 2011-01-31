@@ -1,0 +1,11 @@
+<% if @records.count != 0 %>
+  <div id="searchnotfound" style="display: none;">
+<% else %>
+  <div id="searchnotfound" style="display: block;">
+<% end %>
+	  <h3>
+	    ご指定の日付にマッチする利用履歴はありませんでした。
+	    <%= link_to "すべての利用履歴を表示", shops_path %>
+	  </h3>
+  </div>
+

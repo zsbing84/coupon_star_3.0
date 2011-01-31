@@ -1,5 +1,8 @@
 # -*- encoding : utf-8 -*-
 class CustomersController < ApplicationController
+
+	trans_sid
+
 	before_filter :require_admin, :only => [:index]
   before_filter :require_correct_customer_or_admin, :only => [:edit, :update, :destroy]
 

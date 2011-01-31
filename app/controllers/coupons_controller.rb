@@ -35,61 +35,16 @@ class CouponsController < ApplicationController
     @header_coupons = true
   end
 
-  def analysis
-    activated_at = nil
-    record = nil
-    general_id = nil
-
-    if params[:commit] == "表示中レコードを削除"
-      record = CouponAnalysisRecord.find(params[:record_id])
-      coupon = record.coupon
-      record.destroy
-      redirect_to analysis_coupon_path(coupon)
-      return
-    elsif params[:commit] == "レコードを表示"
-      record = CouponAnalysisRecord.find(params[:record_id])
-      @coupon = record.coupon
-      general_id = params[:general_id].to_i
-      activated_at = record.activated_at
-    else
-      @coupon = Coupon.find(params[:id])
-      record = CouponAnalysisRecord.where("coupon_id = ? AND is_current = ?", @coupon.id, true).first
-      general_id = 1
-      activated_at = record.activated_at
-    end
-
-    if !record.activated_at.nil?
-      young_data = CouponAnalysisRecord.get_analysis_data(record, general_id, "young")
-      prime_data = CouponAnalysisRecord.get_analysis_data(record, general_id, "prime")
-      middle_data = CouponAnalysisRecord.get_analysis_data(record, general_id, "middle")
-      old_data = CouponAnalysisRecord.get_analysis_data(record, general_id, "old")
-      male_data = CouponAnalysisRecord.get_analysis_data(record, general_id, "male")
-      female_data = CouponAnalysisRecord.get_analysis_data(record, general_id, "female")
-      all_data = CouponAnalysisRecord.get_analysis_data(record, general_id, "all")
-    else
-      young_data = nil
-      prime_data = nil
-      middle_data = nil
-      old_data = nil
-      male_data = nil
-      female_data = nil
-      all_data = nil
-    end
-
-    @record = record
-    @general = CouponChartDisplayGeneral.find(general_id)
+	def display_records
+		@coupon = Coupon.find(params[:id])
+		@records = @coupon.coupon_analysis_records
     @title = @coupon.title
+    @header_coupons = true
     @sub_header = true
     @coupon_analysis_info = true
-    @header_coupons = true
-		chart_y_title = get_chart_y_title(general_id)
-    age_dist_title = get_age_dist_chart_title(general_id)
-    gender_dist_title = get_gender_dist_chart_title(general_id)
-    @age_dist_chart = get_coupon_age_dist_chart(
-      age_dist_title, chart_y_title, activated_at, young_data, prime_data, middle_data, old_data, all_data)
-    @gender_dist_chart = get_coupon_gender_dist_chart(
-      gender_dist_title, chart_y_title, activated_at, male_data, female_data, all_data)
-  end
+
+		render '/coupon_analysis_records/index'
+	end
 
   def use
     @coupon = Coupon.find(params[:id])
@@ -172,31 +127,6 @@ class CouponsController < ApplicationController
     redirect_to coupons_path
   end
 
-private
-
-	def get_chart_y_title(general_id)
-		if general_id == 1
-      "閲覧数"
-    elsif general_id == 2
-      "利用数"
-    end
-	end
-
-	def get_age_dist_chart_title(general_id)
-		if general_id == 1
-      "閲覧数遷移チャート　（年齢別）"
-    elsif general_id == 2
-      "利用数遷移チャート　（年齢別）"
-    end
-	end
-
-	def get_gender_dist_chart_title(general_id)
-		if general_id == 1
-      "閲覧数遷移チャート　（男女別）"
-    elsif general_id == 2
-      "利用数遷移チャート　（男女別）"
-    end
-	end
 
 end
 

@@ -5,7 +5,7 @@ CouponStar::Application.routes.draw do
 	resources :master_password_resets, :only => [:new, :create, :destroy, :edit]
 	resources :customer_sessions, :only => [:new, :create, :destroy]
 	resources :customer_password_resets, :only => [:new, :create, :destroy, :edit]
-  resources :coupon_analysis_records, :only => [:new, :create, :destroy]
+  resources :coupon_analysis_records, :only => [:new, :create, :destroy, :index, :show]
 
   resources :masters do
 		resources :shops
@@ -26,8 +26,9 @@ CouponStar::Application.routes.draw do
 	resources :coupons do
 		resources :customers, :shops
 		member do
-      get 'analysis'
       get 'use'
+      get 'analysis'
+      get 'display_records'
     end
   end
 
@@ -44,7 +45,7 @@ CouponStar::Application.routes.draw do
 
   match '/edit_master_password_reset', :to => 'master_password_resets#edit'
   match '/coupon_use', :to => 'coupons#use'
-  match '/coupon_analysis', :to => 'coupons#analysis'
+  match '/coupon_analysis', :to => 'coupon_analysis_records#show'
   match '/shop_analysis', :to => 'shops#analysis'
   match '/shops_search_form', :to => 'shops#search'
 	match '/master_signup',  :to => 'masters#new'
@@ -63,6 +64,8 @@ CouponStar::Application.routes.draw do
   match '/coupons_search', :to => 'searches#coupons_search'
   match '/masters_search', :to => 'searches#masters_search'
   match '/customers_search', :to => 'searches#customers_search'
+  match '/coupon_analysis_records_search', :to => 'searches#coupon_analysis_records_search'
+
 	root :to => 'pages#home'
 end
 

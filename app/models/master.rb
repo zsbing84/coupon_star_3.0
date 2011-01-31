@@ -8,10 +8,6 @@ class Master < ActiveRecord::Base
 
 	has_many :shops, :dependent => :destroy
 
-  searchable do
-    text :email, :default_boost => 2
-  end
-
 	def self.activate!(master)
     master.update_attribute(:active, true)
   end
