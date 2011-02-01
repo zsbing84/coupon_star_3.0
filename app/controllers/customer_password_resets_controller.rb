@@ -1,4 +1,5 @@
 class CustomerPasswordResetsController < ApplicationController
+	trans_sid
   before_filter :load_customer_using_perishable_token, :only => [:edit, :update]
   before_filter :require_no_customer
   

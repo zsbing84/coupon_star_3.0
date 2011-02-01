@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 class CustomerActivationsController < ApplicationController
-
-before_filter :require_no_customer
+	trans_sid
+	before_filter :require_no_customer
 
   def create
     @customer = Customer.find_using_perishable_token(params[:activation_code], 1.week) || (raise Exception)

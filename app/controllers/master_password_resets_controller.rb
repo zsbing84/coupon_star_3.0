@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 class MasterPasswordResetsController < ApplicationController
+	trans_sid
 	before_filter :require_no_master, :only => [:new]
 
   def new

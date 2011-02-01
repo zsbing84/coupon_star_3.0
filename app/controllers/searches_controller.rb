@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 class SearchesController < ApplicationController
+	trans_sid
 
   def coupons_search
     if params[:keywords] != ""

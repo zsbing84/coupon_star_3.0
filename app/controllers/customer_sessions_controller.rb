@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class CustomerSessionsController < ApplicationController
-  trans_sid :always
+	trans_sid
 	before_filter :require_mobile_request, :only => [:new]
 
   def new

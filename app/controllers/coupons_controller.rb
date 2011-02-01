@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class CouponsController < ApplicationController
-
+	trans_sid
 	before_filter :require_no_mobile_request, :only => [:new, :create, :edit, :update, :destory, :analysis]
 	before_filter :require_mobile_request, :only => [:show]
 	before_filter :require_master, :only => [:new, :create]

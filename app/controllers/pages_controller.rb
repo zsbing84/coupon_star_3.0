@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 class PagesController < ApplicationController
+	trans_sid
 
   def home
     if signed_in_master? || signed_in_customer?

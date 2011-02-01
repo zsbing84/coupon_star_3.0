@@ -1,5 +1,6 @@
 # -*- encoding : utf-8 -*-
 class MasterSessionsController < ApplicationController
+	trans_sid
 	before_filter :require_no_mobile_request, :only => [:new]
 
 	def new

@@ -1,4 +1,5 @@
 class ShopCustomerRelsController < ApplicationController
+	trans_sid
 
 	def create
     @shop = Shop.find(params[:shop_customer_rel][:shop_id])

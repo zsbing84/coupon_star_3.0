@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class MastersController < ApplicationController
-
+	trans_sid
 	before_filter :require_no_mobile_request, :only => [:new, :create]
 	before_filter :require_correct_master, :only => [:show, :edit, :update]
 	before_filter :require_admin, :only => [:index, :destroy, :display_shops, :display_coupons]

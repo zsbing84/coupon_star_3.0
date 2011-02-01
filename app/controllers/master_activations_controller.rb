@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 class MasterActivationsController < ApplicationController
-
-before_filter :require_no_master
+	trans_sid
+	before_filter :require_no_master
 
   def create
     @master = Master.find_using_perishable_token(params[:activation_code], 1.hour) || (raise Exception)
