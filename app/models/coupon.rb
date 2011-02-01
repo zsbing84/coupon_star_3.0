@@ -26,11 +26,6 @@ class Coupon < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
   accepts_nested_attributes_for :fine_prints, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
 
-  searchable do
-    text :title, :default_boost => 2
-    text :content
-  end
-
 	def self.activate!(coupon, date)
     coupon.shop.customers.each do |customer|
       if is_age_sufficient(coupon, customer) && is_gender_sufficient(coupon, customer)

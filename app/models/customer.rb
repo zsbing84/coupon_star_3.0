@@ -18,10 +18,6 @@ class Customer < ActiveRecord::Base
   validates_presence_of :gender_id
 	validates_date :birthday
 
-  searchable do
-    text :email
-  end
-
 	def self.activate!(customer)
     customer.update_attribute(:active, true)
   end

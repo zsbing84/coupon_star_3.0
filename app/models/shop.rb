@@ -22,11 +22,6 @@ class Shop < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
   accepts_nested_attributes_for :open_hours, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
 
-  searchable do
-    text :name, :default_boost => 2
-    text :description
-  end
-
   def get_analysis_start_at(duration_id)
     start_at = self.young_start_at
     created_at = self.created_at.to_date
