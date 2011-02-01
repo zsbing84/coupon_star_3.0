@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 # Be sure to restart your server when you modify this file.
 
-CouponStar::Application.config.session_store :active_record_store
+CouponStar::Application.config.session_store :active_record_store, :key => '_session_id'
 CouponStar::Application.config.session_store = {:cookie_only => false}
 
 
