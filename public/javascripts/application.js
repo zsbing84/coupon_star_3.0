@@ -28,11 +28,19 @@ jQuery(function($){
 });
 
 $(function (){
-    $('#coupon_start_at').datepicker({maxDate: '+3m', minDate: '-0', autoSize: true, altField: '#actualDate', altFormat: 'yy-mm-dd', disabled: true, hideIfNoPrevNext: true });
+    $('#coupon_start_at').datepicker({maxDate: '+3m', minDate: '-0', autoSize: false, altField: '#actualDate', altFormat: 'yy-mm-dd', disabled: true, hideIfNoPrevNext: true });
 });
 
 $(function (){
-    $('#coupon_end_at').datepicker({maxDate: '+3m', minDate: '-0', autoSize: true, altField: '#actualDate', altFormat: 'yy-mm-dd', disabled: true, hideIfNoPrevNext: true });
+    $('#coupon_end_at').datepicker({maxDate: '+3m', minDate: '-0', autoSize: false, altField: '#actualDate', altFormat: 'yy-mm-dd', disabled: true, hideIfNoPrevNext: true });
+});
+
+$(function (){
+    $('#record_start_at').datepicker({autoSize: false, altField: '#actualDate', altFormat: 'yy-mm-dd', disabled: true, hideIfNoPrevNext: true });
+});
+
+$(function (){
+    $('#record_end_at').datepicker({autoSize: false, altField: '#actualDate', altFormat: 'yy-mm-dd', disabled: true, hideIfNoPrevNext: true });
 });
 
 function remove_field(link) {

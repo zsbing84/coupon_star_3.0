@@ -20,9 +20,9 @@
     <li>
     <% end %>
        <% if !@coupon.nil? %>
-          <%= link_to "利用分析履歴", display_records_coupon_path(@coupon) %>
+          <%= link_to "利用履歴", display_records_coupon_path(@coupon) %>
        <% elsif !@shop.nil? %>
-          <%= link_to "フォロワー分析", analysis_shop_path(@shop) %>
+          <%= link_to "フォロワー数遷移", analysis_shop_path(@shop) %>
        <% end %>
     </li>
   </ul>

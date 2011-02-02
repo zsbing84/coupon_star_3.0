@@ -39,7 +39,7 @@ module CustomerSessionsHelper
         return false
       end
     else
-      flash[:notice] = "携帯デバイス以外からのアクセスができません。"
+      flash[:notice] = "携帯端末以外からのアクセスができません。"
       redirect_to root_path
       return false
     end
@@ -57,7 +57,7 @@ module CustomerSessionsHelper
         redirect_to coupons_path
       end
     else
-      flash[:notice] = "携帯デバイス以外からのアクセスができません。"
+      flash[:notice] = "携帯端末以外からのアクセスができません。"
       redirect_to root_path
       return false
     end
@@ -65,7 +65,7 @@ module CustomerSessionsHelper
 
   def require_no_customer
     if current_customer
-      flash[:notice] = "You must be logged out to access this page"
+      flash[:notice] = "このページにアクセスするにログアウトが必要です。"
       redirect_to root_path
       return false
     end
@@ -74,7 +74,7 @@ module CustomerSessionsHelper
   def require_correct_customer_or_admin
     @customer = Customer.find(params[:id])
     unless current_customer?(@customer) || admin_master?
-      flash[:notice] = "You don't have the right authority to access this page"
+      flash[:notice] = "このページにアクセスする必要な権限がありません。"
       redirect_to(root_path)
       return false
     end

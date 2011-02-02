@@ -32,6 +32,21 @@ module ApplicationHelper
 		end
   end
 
+  def viewed_count(record)
+		if !record.is_current? 
+			record.viewed_count
+		else 
+			record.coupon.viewed_count 
+		end
+  end
+
+  def clicked_count(record)
+		if !record.is_current? 
+			record.clicked_count
+		else 
+			record.coupon.clicked_count 
+		end
+  end
 
 	def mark_required(object, attribute)
 	  "*" if object.class.validators_on(attribute).map(&:class).include? ActiveModel::Validations::PresenceValidator

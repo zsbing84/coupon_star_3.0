@@ -3,7 +3,7 @@ class CouponsController < ApplicationController
 	trans_sid
 	before_filter :require_no_mobile_request, :only => [:new, :create, :edit, :update, :destory, :analysis]
 	before_filter :require_mobile_request, :only => [:show]
-	before_filter :require_master, :only => [:new, :create]
+	before_filter :require_master, :only => [:new, :create, :update, :edit, :display_records]
   before_filter :require_correct_customer, :only => [:show]
 	before_filter :require_master_or_customer, :only => [:index]
 	before_filter :require_correct_coupon_master, :only => [:edit, :update, :destroy, :analysis]

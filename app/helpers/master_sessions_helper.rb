@@ -41,7 +41,7 @@ module MasterSessionsHelper
   def require_master
     unless current_master
       store_location
-      flash[:notice] = "You must be logged in to access this page"
+      flash[:notice] = "このページにアクセスするにはログインが必要です。"
       redirect_to master_signin_path
       return false
     end
@@ -49,7 +49,7 @@ module MasterSessionsHelper
 
   def require_no_master
     if current_master
-      flash[:notice] = "You must be logged out to access this page"
+      flash[:notice] = "このページにアクセスするにはログアウトが必要です。"
       redirect_to root_path
       return false
     end
@@ -59,14 +59,14 @@ module MasterSessionsHelper
 		if request.mobile?
 			unless current_customer
 				store_location
-    		flash[:notice] = "You must be logged in to access this page"
+    		flash[:notice] = "このページにアクセスするにはログインが必要です。"
 				redirect_to customer_signin_path
 				return false
 			end
 		else
 			unless current_master
 				store_location
-    		flash[:notice] = "You must be logged in to access this page"
+    		flash[:notice] = "このページにアクセスするにはログインが必要です。"
 				redirect_to master_signin_path
 				return false
 			end
@@ -76,7 +76,7 @@ module MasterSessionsHelper
   def require_correct_master
     master = Master.find(params[:id])
     unless current_master?(master) || admin_master?
-			flash[:notice] = "You don't have the right authority to access this page"
+			flash[:notice] = "このページにアクセスする必要な権限がありません。"
 			redirect_to(root_path)
 			return false
 		end
@@ -86,7 +86,7 @@ module MasterSessionsHelper
   	coupon = Coupon.find(params[:id])
   	master = coupon.shop.master
     unless current_master?(master) || admin_master?
-			flash[:notice] = "You don't have the right authority to access this page"
+			flash[:notice] = "このページにアクセスする必要な権限がありません。"
 			redirect_to(root_path)
 			return false
 		end
@@ -96,7 +96,7 @@ module MasterSessionsHelper
   	shop = Shop.find(params[:id])
   	master = shop.master
     unless current_master?(master) || admin_master?
-			flash[:notice] = "You don't have the right authority to access this page"
+			flash[:notice] = "このページにアクセスする必要な権限がありません。"
 			redirect_to(root_path)
 			return false
 		end
@@ -104,7 +104,7 @@ module MasterSessionsHelper
 
 	def require_admin
 		unless admin_master?
-			flash[:notice] = "You don't have the right authority to access this page"
+			flash[:notice] ="このページにアクセスする必要な権限がありません。"
 			redirect_to(root_path)
 			return false
 		end
@@ -112,7 +112,7 @@ module MasterSessionsHelper
 
 	def require_mobile_request
 		unless request.mobile?
-			flash[:notice] = "You can't access this page from others execept mobile devices"
+			flash[:notice] = "携帯端末以外からのアクセスができません。"
 			redirect_to(root_path)
 			return false
 		end
@@ -120,7 +120,7 @@ module MasterSessionsHelper
 
 	def require_no_mobile_request
 		if request.mobile?
-			flash[:notice] = "You can't access this page from mobile devices"
+			flash[:notice] = "携帯端末からのアクセスができません。"
 			redirect_to(root_path)
 			return false
 		end

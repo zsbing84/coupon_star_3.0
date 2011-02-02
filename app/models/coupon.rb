@@ -62,17 +62,20 @@ class Coupon < ActiveRecord::Base
 	end
 
 	def self.inactivate(coupon)
+		
 	  if coupon.start_at > Date.today
-	    name = "#{coupon.start_at} ～ #{coupon.start_at}"
+	    inactivated_at = coupon.start_at
     else
-	    name = "#{coupon.start_at} ～ #{Date.today}"
+			inactivated_at = Date.today
     end
 
+		name = "#{coupon.start_at} ～ #{inactivated_at}"
     record = CouponAnalysisRecord.where("coupon_id = ? AND is_current = ?", coupon.id, true).first
     CouponAnalysisRecord.create!(:coupon_id => coupon.id,
                            :is_current => false,
                            :name => name,
                            :activated_at => record.activated_at,
+													 :inactivated_at => inactivated_at,
                            :young_views => get_analysis_str(record.young_views, coupon),
                            :young_clicks => get_analysis_str(record.young_clicks, coupon),
                            :prime_views => get_analysis_str(record.prime_views, coupon),
@@ -86,7 +89,9 @@ class Coupon < ActiveRecord::Base
                            :female_views => get_analysis_str(record.female_views, coupon),
                            :female_clicks => get_analysis_str(record.female_clicks, coupon),
                            :all_views => get_analysis_str(record.all_views, coupon),
-                           :all_clicks => get_analysis_str(record.all_clicks, coupon))
+                           :all_clicks => get_analysis_str(record.all_clicks, coupon),
+													 :viewed_count => coupon.viewed_count,
+													 :clicked_count => coupon.clicked_count)
 
 		record.update_attributes(:activated_at => nil,
 														 :young_views => nil,

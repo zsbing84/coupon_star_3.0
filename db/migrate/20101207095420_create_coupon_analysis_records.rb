@@ -5,6 +5,7 @@ class CreateCouponAnalysisRecords < ActiveRecord::Migration
       t.string :name, :null => false
       t.boolean :is_current, :null => false, :default => false
       t.date :activated_at
+      t.date :inactivated_at
       t.text :young_views
       t.text :young_clicks
       t.text :prime_views
@@ -19,6 +20,8 @@ class CreateCouponAnalysisRecords < ActiveRecord::Migration
       t.text :female_clicks
       t.text :all_views
       t.text :all_clicks
+      t.integer :viewed_count
+      t.integer :clicked_count
       t.timestamps
     end
   end

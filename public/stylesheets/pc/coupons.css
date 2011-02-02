@@ -376,7 +376,7 @@ html body #content .coupons .panel .panel-body #searchnotfound h3 a:hover span {
 html body #content .records {
   margin:auto;
   padding-top:40px;
-  width:620px;
+  width:720px;
 }
 
 html body #content .records .panel  {
@@ -402,25 +402,34 @@ html body #content .records .panel .panel-body #search_bar fieldset h2 {
   margin:0;
   padding:0;
   text-align:left;
-  width:240px;
+  width:150px;
 }
 
-html body #content .records .panel .panel-body #search_bar fieldset .field {
-  float:right;
-  text-align:right;
-  width:440px;
+html body #content .records .panel .panel-body #search_bar fieldset .field .separator {
+  display: inline;
+}
+
+html body #content .records .panel .panel-body #search_bar fieldset .field #record_start_at {
+	margin-left: 10px;
+  display: inline;
+}
+
+html body #content .records .panel .panel-body #search_bar fieldset .field #record_end_at {
+  display: inline;
+}
+
+html body #content .records .panel .panel-body #search_bar fieldset .field .submit {
+	margin-left: 20px;
+  display: inline;
 }
 
 html body #content .records .panel .panel-body #search_bar fieldset .field label {
   float:left;
+  margin-left:60px;
   font-size:12px;
   line-height:26px;
   padding-right:5px;
   text-align:right;
-}
-
-html body #content .records .panel .panel-body #search_bar fieldset .field .text {
-  float:right;
 }
 
 html body #content .records .panel .panel-body .pagination{
@@ -509,7 +518,7 @@ html body #content .records .panel .panel-body .record ul.submenu {
   margin:0 40px 0 0;
   float:right;
   display:block;
-  width:180px;
+  width:300px;
   padding-top:15px;
 }
 

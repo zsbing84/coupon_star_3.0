@@ -3,11 +3,14 @@
     <h2>履歴件数： <%= @records.count %></h2>
     <div class="field">
       <label>
-        <%= link_to "すべてのショップを表示", coupon_analysis_records_path %>
-          <span class="separator"> | </span>
-          ショップ名で検索
+        <%= link_to "すべての履歴を表示", display_records_coupon_path(@coupon) %>
+ 				<span class="separator"> | </span>
       </label>
-      <%= text_field_tag :keywords, params[:keywords], :class => "text" %>
+			<%= hidden_field_tag 'id', @coupon.id %>
+      <%= text_field_tag :record_start_at, params[:activated_at], :class => "text", :size => '13' %>
+			<span class="separator"> ～ </span>
+      <%= text_field_tag :record_end_at, params[:inactivated_at], :class => "text", :size => '13' %>
+			<%= submit_tag "検索", :class => "link_button submit"%>
     </div>
   </fieldset>
 </form>

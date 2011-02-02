@@ -13,10 +13,11 @@
 ActiveRecord::Schema.define(:version => 20110201043513) do
 
   create_table "coupon_analysis_records", :force => true do |t|
-    t.integer  "coupon_id",                        :null => false
-    t.string   "name",                             :null => false
-    t.boolean  "is_current",    :default => false, :null => false
+    t.integer  "coupon_id",                         :null => false
+    t.string   "name",                              :null => false
+    t.boolean  "is_current",     :default => false, :null => false
     t.date     "activated_at"
+    t.date     "inactivated_at"
     t.text     "young_views"
     t.text     "young_clicks"
     t.text     "prime_views"
@@ -31,6 +32,8 @@ ActiveRecord::Schema.define(:version => 20110201043513) do
     t.text     "female_clicks"
     t.text     "all_views"
     t.text     "all_clicks"
+    t.integer  "viewed_count"
+    t.integer  "clicked_count"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

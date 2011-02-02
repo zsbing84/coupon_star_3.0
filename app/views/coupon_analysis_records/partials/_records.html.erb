@@ -4,6 +4,11 @@
 	    <div class="sample_record_image"></div>
     <% end %>
     <div class="record_name">
+      <span class="count">
+          閲覧数： <%= viewed_count(record) %>
+        <span class="separator"></span>
+          利用数： <%= clicked_count(record) %>
+      </span>
       <h4>
         <%= link_to record.name, record %>
       </h4>
@@ -18,7 +23,7 @@
 				<% end %>
       </li>
       <li>
-        <%= link_to "詳細", record, :class => "action_botton" %>
+        <%= link_to "利用詳細", record, :class => "action_botton" %>
       </li>
     </ul>
 	</div>

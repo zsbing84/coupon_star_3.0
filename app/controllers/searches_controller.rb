@@ -1,6 +1,8 @@
 # -*- encoding : utf-8 -*-
 class SearchesController < ApplicationController
 	trans_sid
+	before_filter :require_master, :only => [:masters_search, :customers_search, :coupon_analysis_records_search]
+	before_filter :require_master_or_customer, :only => [:coupons_search, :shops_search]
 
   def coupons_search
     if params[:keywords] != ""
@@ -118,5 +120,18 @@ class SearchesController < ApplicationController
     render "/customers/index"
   end
 
+	def coupon_analysis_records_search
+		@coupon = Coupon.find(params[:id])
+		record_start_at = params[:record_start_at]
+		record_end_at = params[:record_end_at]
+		@records = CouponAnalysisRecord.where("(activated_at >= ? AND activated_at <= ?) OR (inactivated_at >= ? AND inactivated_at <= ?)", record_start_at, record_end_at, record_start_at, record_end_at)
+
+    @title = @coupon.title
+    @header_coupons = true
+    @sub_header = true
+    @coupon_analysis_info = true
+
+		render '/coupon_analysis_records/index'		
+	end
 end
 
