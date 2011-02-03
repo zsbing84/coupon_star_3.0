@@ -127,6 +127,7 @@ def make_shops
 		holiday = "月曜日"
 		nearest_station = "JR中央線・山手線「新宿駅」より徒歩3分"
 		postcode = "1600000"
+		open_hours_content = "17：00 ～ 21:00"
     shop = master.shops.create!(:name => name,
 											         :description => description,
 											         :address => address,
@@ -135,7 +136,10 @@ def make_shops
 	                             :phone_part_3 => phone_part_3,
 											         :holiday => holiday,
 											         :postcode => postcode,
-											         :nearest_station => nearest_station)
+											         :nearest_station => nearest_station,
+															 :open_hours_attributes => [
+																{:content => open_hours_content}
+															 ])
 
     datetime = (shop.created_at.to_date - 240).to_datetime
     shop.update_attribute(:created_at, datetime)

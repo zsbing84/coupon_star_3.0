@@ -62,6 +62,7 @@ module CouponStar
 
     config.time_zone = 'Tokyo'
     config.action_controller.allow_forgery_protection = false
+
   end
 end
 

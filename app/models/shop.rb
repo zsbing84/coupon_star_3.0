@@ -18,6 +18,7 @@ class Shop < ActiveRecord::Base
   validates :phone_part_3, :presence => true, :numericality => true, :length => { :maximum => 4 }
   validates :address, :presence => true, :length => { :maximum => 20 }
   validates :holiday, :presence => true, :length => { :maximum => 20 }
+  validates_presence_of :open_hours, :message => "を追加してください。"
   validates_attachment_size :photo, :less_than => 5.megabytes
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
   accepts_nested_attributes_for :open_hours, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true

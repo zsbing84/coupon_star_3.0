@@ -24,6 +24,9 @@ class CreateCouponAnalysisRecords < ActiveRecord::Migration
       t.integer :clicked_count
       t.timestamps
     end
+
+		add_index :coupon_analysis_records, :activated_at
+		add_index :coupon_analysis_records, :inactivated_at
   end
 
   def self.down

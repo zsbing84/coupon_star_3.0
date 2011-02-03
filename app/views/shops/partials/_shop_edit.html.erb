@@ -24,7 +24,7 @@
 				<div class="part">
 				  <h3><%= f.label :postcode %><div class="com_icon"></div></h3>
 				  <div class="field">
-				    <%= f.text_field :postcode, :size => "5", :maxlength => "7",
+				    <%= f.text_field :postcode, :size => "7", :maxlength => "7",
 				                     :class => "text password", :value => @shop.postcode %>
 						<br />
 				    <p>例: 1600000</p>
@@ -33,13 +33,13 @@
 				<div class="part">
 				  <h3><%= f.label :phone_number %><div class="com_icon"></div></h3>
 				  <div class="field">
-				    <%= f.text_field :phone_part_1, :size => "2", :maxlength => 3,
+				    <%= f.text_field :phone_part_1, :size => "2", :maxlength => 4,
 				                     :class => "text password", :value => @shop.phone_part_1 %>
 				    <span class="phone_separator">-</span>
-				    <%= f.text_field :phone_part_2, :size => "2", :maxlength => 4,
+				    <%= f.text_field :phone_part_2, :size => "4", :maxlength => 4,
 				                     :class => "text password", :value => @shop.phone_part_2 %>
 				    <span class="phone_separator">-</span>
-				    <%= f.text_field :phone_part_3, :size => "2", :maxlength => 4,
+				    <%= f.text_field :phone_part_3, :size => "4", :maxlength => 4,
 				                     :class => "text password", :value => @shop.phone_part_3 %>
             <p>例: 03-0303-0303</p>
 				  </div>

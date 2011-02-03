@@ -90,6 +90,29 @@ class ShopsController < ApplicationController
 			@shop = Shop.new(params[:shop])
 	    @shop.master_id = current_master.id
 	    if @shop.save
+		    start_at = @shop.created_at.to_date
+		    @shop.update_attributes(:young_start_at => start_at,
+		                          :prime_start_at => start_at,
+		                          :middle_start_at => start_at,
+		                          :old_start_at => start_at,
+		                          :male_start_at => start_at,
+		                          :female_start_at => start_at,
+		                          :all_start_at => start_at,
+		                          :young_total_count => 0,
+		                          :prime_total_count => 0,
+		                          :middle_total_count => 0,
+		                          :old_total_count => 0,
+		                          :male_total_count => 0,
+		                          :female_total_count => 0,
+		                          :all_total_count => 0,
+		                          :young_followers => get_init_followers_str(),
+		                          :prime_followers => get_init_followers_str(),
+		                          :middle_followers => get_init_followers_str(),
+		                          :old_followers => get_init_followers_str(),
+		                          :male_followers => get_init_followers_str(),
+		                          :female_followers => get_init_followers_str(),
+		                          :old_followers => get_init_followers_str(),
+		                          :all_followers => get_init_followers_str())
 				flash[:notice] = @shop.name + "が作成されました。"
 	   		redirect_to shops_path
 			else
@@ -155,6 +178,20 @@ class ShopsController < ApplicationController
 
     render '/coupons/index'
   end
+
+private
+
+	def get_init_followers_str
+	  array = []
+	  (0..179).each do |index|
+	    array << 0
+	  end
+	  convert_array_to_string(array)
+	end
+
+	def convert_array_to_string(array)
+	  array.join(', ')
+	end
 
 end
 
