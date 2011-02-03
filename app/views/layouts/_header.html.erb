@@ -64,43 +64,45 @@
 	    <% end %>
 	  </ul>
 		<% if admin_master? %>
-      <div class="admin_links">
-        <ul class="account-links inline">
-				  <div id="logged-in-links" style="display: block;">
-					  <% if @header_new_master == true %>
-			        <li class="active">
-			      <% else %>
-			        <li>
-			      <% end %>
-			        <%= link_to "マスター作成", new_master_path %>
-			      </li>
+			<center>
+	      <div class="admin_links">
+	        <ul class="account-links inline">
+					  <div id="logged-in-links" style="display: block;">
+						  <% if @header_new_master == true %>
+				        <li class="active">
+				      <% else %>
+				        <li>
+				      <% end %>
+				        <%= link_to "マスター作成", new_master_path %>
+				      </li>
 
-			      <% if @header_new_customer == true %>
-			        <li class="active">
-			      <% else %>
-			        <li>
-			      <% end %>
-			        <%= link_to "カスタマー作成", new_customer_path %>
-			      </li>
+				      <% if @header_new_customer == true %>
+				        <li class="active">
+				      <% else %>
+				        <li>
+				      <% end %>
+				        <%= link_to "カスタマー作成", new_customer_path %>
+				      </li>
 
-			      <% if @header_masters == true %>
-			        <li class="active">
-			      <% else %>
-			        <li>
-			      <% end %>
-			        <%= link_to "マスター一覧", masters_path %>
-			      </li>
+				      <% if @header_masters == true %>
+				        <li class="active">
+				      <% else %>
+				        <li>
+				      <% end %>
+				        <%= link_to "マスター一覧", masters_path %>
+				      </li>
 
-			      <% if @header_customers == true %>
-			        <li class="active">
-			      <% else %>
-			        <li>
-			      <% end %>
-			        <%= link_to "カスタマー一覧", customers_path %>
-			      </li>
-				  </div>
-			  </ul>
-      </div>
+				      <% if @header_customers == true %>
+				        <li class="active">
+				      <% else %>
+				        <li>
+				      <% end %>
+				        <%= link_to "カスタマー一覧", customers_path %>
+				      </li>
+					  </div>
+				  </ul>
+	      </div>
+			</center>
 		<% end %>
 	</div>
 </div>

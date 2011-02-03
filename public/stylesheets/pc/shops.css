@@ -3,12 +3,16 @@ html body #content .shop_analysis{
   padding:0 40px;
   width:850px;
   height:600px;
-  margin:auto;
+  margin-top:0;
+  margin-bottom:0;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 html body #content .shop_analysis .chart {
   border-top:4px solid #1F2028;
 	margin:auto;
+	margin-bottom: 20px;
   height:320px;
 	display:block;
 }
@@ -17,7 +21,7 @@ html body #content .shop_analysis .chart_form {
   -moz-border-radius:14px 14px 14px 14px;
   -moz-box-shadow:2px 2px 7px #151515;
   background-color:#22232C;
-  margin:20px 0px 20px 0px;
+  margin:0px 0px 20px 0px;
   padding:15px 20px 15px 20px;
   display:block;
 }
@@ -29,7 +33,7 @@ html body #content .shop_analysis .chart_form .separator {
 
 html body #content .shop_analysis .part {
   background-color:#191A20;
-  margin:20px;
+  margin:0px 20px 0px 20px;
 }
 
 html body #content .shop_detail {

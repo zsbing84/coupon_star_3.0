@@ -9,6 +9,7 @@ html body #content #coupon_analysis{
 html body #content #coupon_analysis .chart {
   border-top:4px solid #1F2028;
 	margin:auto;
+	margin-bottom: 20px;
   height:320px;
 	display:block;
 }
@@ -17,7 +18,7 @@ html body #content #coupon_analysis .chart_form {
   -moz-border-radius:14px 14px 14px 14px;
   -moz-box-shadow:2px 2px 7px #151515;
   background-color:#22232C;
-  margin:20px 0px 20px 0px;
+  margin:0px 0px 20px 0px;
   padding:15px 20px 15px 20px;
   display:block;
 }
@@ -38,7 +39,7 @@ html body #content #coupon_analysis .chart_form .destroy {
 
 html body #content #coupon_analysis .part {
   background-color:#191A20;
-  margin:20px;
+  margin:0px 20px 0px 20px;
 }
 
 html body #content .coupon_detail {

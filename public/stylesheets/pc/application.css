@@ -530,11 +530,17 @@ li {
   margin-right:25px;
   padding-left:15px;
   padding-right:15px;
+	width: auto;
 }
 
 #header .admin_links {
-  margin-right:110px;
+  margin-right:0px;
 }
+
+#header .admin_links ul.account-links a{
+	font-size: 13px;
+}
+
 
 #header ul.account-links a {
   color:#AAAAAA;
@@ -556,7 +562,6 @@ li {
 #header .header_links {
   margin-top: 25px;
 }
-
 
 ul.submenu {
   display:inline-block;
@@ -872,7 +877,7 @@ html body .selectReplace ul.selectReplacement {
 }
 
 html body .selectReplace ul.selectReplacement li {
-  background: #cf5a5a;
+  background: #45A4FF;
   color: #fff;
   cursor: pointer;
   display: none;
