@@ -68,7 +68,7 @@
 <div class="input_label">■営業時間：</div>
 <div class="input_field">
 	<% for open_hour in @shop.open_hours %>
-	  ・<%= open_hour.open_at.strftime("%H:%M") %> ～ <%= open_hour.close_at.strftime("%H:%M") %>
+	  ・<%= open_hour.content %>
 		<br />
 	<% end %>
 	<br />

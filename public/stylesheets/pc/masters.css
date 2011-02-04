@@ -125,13 +125,13 @@ html body #content .masters .panel .panel-body #search_bar fieldset h2 {
   margin:0;
   padding:0;
   text-align:left;
-  width:240px;
+  width:140px;
 }
 
 html body #content .masters .panel .panel-body #search_bar fieldset .field {
   float:right;
   text-align:right;
-  width:460px;
+  width:500px;
 }
 
 html body #content .masters .panel .panel-body #search_bar fieldset .field label {
@@ -277,6 +277,10 @@ html body #content .masters .panel .panel-body .master ul.submenu li a {
   padding:5px 24px;
   margin-right: 20px;
   text-decoration:none;
+}
+
+html body #content .masters .panel .panel-body .master ul.submenu li a:hover {
+  color:#ffffff;
 }
 
 html body #content .masters .panel .panel-body .master_foot {

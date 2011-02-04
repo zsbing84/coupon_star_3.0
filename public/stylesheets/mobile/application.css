@@ -36,7 +36,7 @@ html body #container .top_division{
   width: 100%;
   font-size: 13px;
   font-weight: bold;
-	background-color: #E4E4E4;
+	background-color: #F0EFEB;
 }
 
 html body #container .hr{
@@ -157,7 +157,7 @@ html body #container .coupon_shop_name{
 
 html body #container .available_count{
 	font-size: 9px;
-	color: blue;
+	color: rgb(68, 68, 68);
 }
 
 html body #container .coupon_title{
@@ -206,17 +206,22 @@ html body #container .coupon_detail_shop_name{
 	color: rgb(68, 68, 68);
 }
 
-html body #container .shop_coupons{
-	font-size: xx-small;
+html body #container .shop_coupons a{
+	font-size: 10px;
 	color: rgb(68, 68, 68);
 }
 
 html body #container .shop_followers_count{
 	font-size: 9px;
-	color: rgb(68, 68, 68);
+	color: rgb(136, 136, 136);
 }
 
 html body #container .coupon_period{
+	font-size: xx-small;
+	color: rgb(136, 136, 136);
+}
+
+html body #container .open_hours{
 	font-size: xx-small;
 	color: rgb(136, 136, 136);
 }

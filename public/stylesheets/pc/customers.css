@@ -1,5 +1,5 @@
 html body #content .customer_detail {
-  width:700px;
+  width:540px;
   display:block;
   margin:auto;
 }
@@ -150,13 +150,13 @@ html body #content .customers .panel .panel-body #search_bar fieldset h2 {
   margin:0;
   padding:0;
   text-align:left;
-  width:200px;
+  width:160px;
 }
 
 html body #content .customers .panel .panel-body #search_bar fieldset .field {
   float:right;
   text-align:right;
-  width:470px;
+  width:500px;
 }
 
 html body #content .customers .panel .panel-body #search_bar fieldset .field label {
@@ -295,12 +295,17 @@ html body #content .customers .panel .panel-body .customer ul.submenu li {
 }
 
 html body #content .customers .panel .panel-body .customer ul.submenu li a {
+	inherit: false;
   -moz-border-radius:14px 14px 14px 14px;
   background-color:#1F2028;
   color:#82859E;
   display:block;
   padding:5px 24px;
   text-decoration:none;
+}
+
+html body #content .customers .panel .panel-body .customer ul.submenu li a:hover {
+  color:#ffffff;
 }
 
 html body #content .customers .panel .panel-body .customer_foot {

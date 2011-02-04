@@ -162,13 +162,13 @@ html body #content .shops .panel .panel-body #search_bar fieldset h2 {
   margin:0;
   padding:0;
   text-align:left;
-  width:240px;
+  width:140px;
 }
 
 html body #content .shops .panel .panel-body #search_bar fieldset .field {
   float:right;
   text-align:right;
-  width:440px;
+  width:480px;
 }
 
 html body #content .shops .panel .panel-body #search_bar fieldset .field label {
@@ -313,6 +313,10 @@ html body #content .shops .panel .panel-body .shop ul.submenu li a {
   display:block;
   padding:5px 24px;
   text-decoration:none;
+}
+
+html body #content .shops .panel .panel-body .shop ul.submenu li a:hover {
+  color:#ffffff;
 }
 
 html body #content .shops .panel .panel-body .shop_foot {

@@ -9,7 +9,11 @@ class CouponsController < ApplicationController
 	before_filter :require_correct_coupon_master, :only => [:edit, :update, :destroy, :analysis]
 
 	def index
-    @title = "マイクーポン"
+		if admin_master?
+			@title = "クーポン一覧"
+		else
+			@title = "マイクーポン"
+		end
     if signed_in_master? && !request.mobile?
       @coupons = current_master.get_coupons
     elsif signed_in_customer? && request.mobile?

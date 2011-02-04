@@ -14,14 +14,16 @@
 	<% else %>
 		<div class="sample_shop_image"></div>
 	<% end %>
-
-	<%= link_to shop.name, shop, :class => "shops_name"%><br /><br />
   <span class="shop_coupons" ">
 		<%= link_to "クーポン一覧へ", display_coupons_shop_path(shop) %>
 	</span><br />
+	<span>
+		<%= link_to shop.name, shop, :class => "shops_name"%><br /><br />
+	</span>
 	<div style="clear: both;"></div>
-  <div class="shop_followers_count">
-	</div>
+  <span class="shop_followers_count">
+    	フォロワー数： <%= shop.customers.count %>
+  </span>
 	<% if shop != @shops.last %>
 		<div id="dotline"></div>
 	<% end %>

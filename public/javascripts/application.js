@@ -1,10 +1,6 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
-$("fieldset").hover(function () {
-  $(this).css("background-color","#1F2028");
-});
-
 jQuery(function($){
 	$.datepicker.regional['ja'] = {
 		closeText: '閉じる',
@@ -27,6 +23,14 @@ jQuery(function($){
 	$.datepicker.setDefaults($.datepicker.regional['ja']);
 });
 
+$('#keyword').click(function() {
+	$(this).css("background-color","yellow");
+});
+
+$(function (){
+    $('#coupon_start_at').datepicker({maxDate: '+3m', minDate: '-0', autoSize: false, altField: '#actualDate', altFormat: 'yy-mm-dd', disabled: true, hideIfNoPrevNext: true });
+});
+
 $(function (){
     $('#coupon_start_at').datepicker({maxDate: '+3m', minDate: '-0', autoSize: false, altField: '#actualDate', altFormat: 'yy-mm-dd', disabled: true, hideIfNoPrevNext: true });
 });
@@ -41,6 +45,10 @@ $(function (){
 
 $(function (){
     $('#record_end_at').datepicker({autoSize: false, altField: '#actualDate', altFormat: 'yy-mm-dd', disabled: true, hideIfNoPrevNext: true });
+});
+
+$(function (){
+    $('#customer_birthday').datepicker({autoSize: false, altField: '#actualDate', altFormat: 'yy-mm-dd', disabled: true, hideIfNoPrevNext: true });
 });
 
 function remove_field(link) {
@@ -129,6 +137,7 @@ function selectReplacement(obj) {
   }
   obj.parentNode.insertBefore(ul,obj);
 }
+
 function selectMe(obj) {
   var lis = obj.parentNode.getElementsByTagName('li');
   for (var i=0; i<lis.length; i++) {
@@ -151,10 +160,12 @@ function selectMe(obj) {
     }
   }
 }
+
 function setVal(objID, selIndex) {
   var obj = document.getElementById(objID);
   obj.selectedIndex = selIndex;
 }
+
 function setForm() {
   var s = document.getElementsByTagName('select');
   for (var i=0; i<s.length; i++) {

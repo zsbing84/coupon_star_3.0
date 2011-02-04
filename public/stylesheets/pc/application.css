@@ -877,7 +877,7 @@ html body .selectReplace ul.selectReplacement {
 }
 
 html body .selectReplace ul.selectReplacement li {
-  background: #45A4FF;
+  background: #transparent;
   color: #fff;
   cursor: pointer;
   display: none;

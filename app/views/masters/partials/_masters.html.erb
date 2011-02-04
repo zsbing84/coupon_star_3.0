@@ -21,6 +21,12 @@
     </div>
     <ul class="submenu">
       <li>
+				<%= link_to "削除", master, :method => :delete,
+	          :confirm => "#{master.email}を永久に削除してよろしいでしょうか?",
+	                                     	:title => "#{master.email}を削除",
+	                                     	:class => "action_botton"%>
+      </li>
+      <li>
         <%= link_to "マスター情報", edit_master_path(master), :class => "action_botton" %>
       </li>
     </ul>

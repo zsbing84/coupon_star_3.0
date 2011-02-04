@@ -11,7 +11,12 @@ class ShopsController < ApplicationController
   before_filter :require_correct_shop_master, :only => [:edit, :update, :destory, :analysis]
 
 	def index
-		@title = "マイショップ"
+		if admin_master?
+			@title = "ショップ一覧"
+		else
+			@title = "マイショップ"
+		end
+
     if signed_in_master? && !request.mobile?
       @shops = current_master.get_shops
     elsif signed_in_customer? && request.mobile?
@@ -168,6 +173,7 @@ class ShopsController < ApplicationController
           @coupons << coupon
         end
       end
+			@coupons = @coupons.paginate :page => params[:page], :order => 'updated_at DESC', :per_page => 10
     elsif signed_in_master?
       current_master.get_coupons.each do |coupon|
         if coupon.shop_id == @shop.id
